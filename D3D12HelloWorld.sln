@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3D12HelloWindow", "D3D12HelloWindow\D3D12HelloWindow.csproj", "{51120F60-2411-458D-B1E9-7EC4B226DDFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3D12HelloTriangle", "D3D12HelloTriangle\D3D12HelloTriangle.csproj", "{95C3F6AC-1325-49E1-8681-74C417D8C949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3D12HelloTexture", "D3D12HelloTexture\D3D12HelloTexture.csproj", "{2A37FD61-2263-4364-AEE4-18FB93CCE610}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3D12HelloConstBuffers", "D3DHelloConstBuffers\D3D12HelloConstBuffers.csproj", "{C373D091-EEDD-4829-8B8A-15F67227C8DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3D12HelloBundles", "D3D12HelloBundles\D3D12HelloBundles.csproj", "{3C72571E-602A-4451-B0F3-98095278FF90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51120F60-2411-458D-B1E9-7EC4B226DDFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51120F60-2411-458D-B1E9-7EC4B226DDFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51120F60-2411-458D-B1E9-7EC4B226DDFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51120F60-2411-458D-B1E9-7EC4B226DDFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C3F6AC-1325-49E1-8681-74C417D8C949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C3F6AC-1325-49E1-8681-74C417D8C949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C3F6AC-1325-49E1-8681-74C417D8C949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C3F6AC-1325-49E1-8681-74C417D8C949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A37FD61-2263-4364-AEE4-18FB93CCE610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A37FD61-2263-4364-AEE4-18FB93CCE610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A37FD61-2263-4364-AEE4-18FB93CCE610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A37FD61-2263-4364-AEE4-18FB93CCE610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C373D091-EEDD-4829-8B8A-15F67227C8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C373D091-EEDD-4829-8B8A-15F67227C8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C373D091-EEDD-4829-8B8A-15F67227C8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C373D091-EEDD-4829-8B8A-15F67227C8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C72571E-602A-4451-B0F3-98095278FF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C72571E-602A-4451-B0F3-98095278FF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C72571E-602A-4451-B0F3-98095278FF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C72571E-602A-4451-B0F3-98095278FF90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
