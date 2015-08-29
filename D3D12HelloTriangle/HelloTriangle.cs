@@ -236,14 +236,14 @@ namespace D3D12HelloTriangle
             // WAITING FOR THE FRAME TO COMPLETE BEFORE CONTINUING IS NOT BEST PRACTICE. 
             // This is code implemented as such for simplicity. 
 
-            int fence = fenceValue;
-            commandQueue.Signal(this.fence, fence);
+            int currentFence = fenceValue;
+            commandQueue.Signal(fence, currentFence);
             fenceValue++;
 
             // Wait until the previous frame is finished.
-            if (this.fence.CompletedValue < fence)
+            if (fence.CompletedValue < currentFence)
             {
-                this.fence.SetEventOnCompletion(fence, fenceEvent.SafeWaitHandle.DangerousGetHandle());
+                fence.SetEventOnCompletion(currentFence, fenceEvent.SafeWaitHandle.DangerousGetHandle());
                 fenceEvent.WaitOne();
             }
 
