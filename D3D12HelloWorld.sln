@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3D12HelloTriangle", "D3D12
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3D12HelloTexture", "D3D12HelloTexture\D3D12HelloTexture.csproj", "{2A37FD61-2263-4364-AEE4-18FB93CCE610}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3D12HelloConstBuffers", "D3DHelloConstBuffers\D3D12HelloConstBuffers.csproj", "{C373D091-EEDD-4829-8B8A-15F67227C8DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3D12HelloConstBuffers", "D3D12HelloConstBuffers\D3D12HelloConstBuffers.csproj", "{C373D091-EEDD-4829-8B8A-15F67227C8DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3D12HelloBundles", "D3D12HelloBundles\D3D12HelloBundles.csproj", "{3C72571E-602A-4451-B0F3-98095278FF90}"
 EndProject
