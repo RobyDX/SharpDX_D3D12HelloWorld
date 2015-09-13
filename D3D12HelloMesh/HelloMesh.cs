@@ -531,7 +531,6 @@ namespace D3D12HelloMesh
             if (isResizing)
             {
                 fenceValue += FrameCount;
-                WaitForPreviousFrame();
                 for (int i = 0; i < FrameCount; i++)
                 {
                     renderTargets[i].Dispose();
