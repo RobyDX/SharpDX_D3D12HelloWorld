@@ -34274,7 +34274,12 @@
             Overrides <see cref="!:System.Text.ASCIIEncoding"/> in order to provide <see cref="T:SharpDX.Text.ASCIIEncoding"/> for Win8 Modern App.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "F:SharpDX.Text.Encoding.ASCII" -->
+        <member name="F:SharpDX.Text.Encoding.ASCII">
+            <summary>
+            Returns an encoding for the ASCII character set. The returned encoding
+             will be an instance of the ASCIIEncoding class.
+            </summary>
+        </member>
         <member name="T:SharpDX.Text.ASCIIEncoding">
             <summary>
             Provides a basic implementation to replace <see cref="!:System.Text.ASCIIEncoding"/> (not available on Win8 Modern App).
