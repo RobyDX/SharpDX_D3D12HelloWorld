@@ -32,7 +32,7 @@ namespace D3D12HelloRenderTarget
             int width = form.ClientSize.Width;
             int height = form.ClientSize.Height;
 
-            form.KeyDown += (sender, e) => 
+            form.KeyDown += (sender, e) =>
             {
                 switch (e.KeyCode)
                 {
@@ -430,7 +430,7 @@ namespace D3D12HelloRenderTarget
                 MaximumAnisotropy = 0,
                 ComparisonFunction = Comparison.Never
             };
-            
+
             // Load model from obj.
             var importer = new Assimp.AssimpImporter();
             var scene = importer.ImportFile(@"../../../Models/lara/lara.obj", PostProcessSteps.GenerateSmoothNormals | PostProcessSteps.FlipUVs | PostProcessSteps.PreTransformVertices);
@@ -533,7 +533,7 @@ namespace D3D12HelloRenderTarget
             // Create and record the bundle.
             bundleAllocator.Reset();
             bundle = device.CreateCommandList(0, CommandListType.Bundle, bundleAllocator, pipelineState);
-            
+
             //Set Heap
             bundle.SetDescriptorHeaps(2, new DescriptorHeap[] { resourceViewHeap, samplerViewHeap });
 
@@ -589,7 +589,7 @@ namespace D3D12HelloRenderTarget
 
             //draw bundle on render target
             commandList.SetRenderTargets(1, renderTargetViewHeap.CPUDescriptorHandleForHeapStart + device.GetDescriptorHandleIncrementSize(DescriptorHeapType.RenderTargetView) * renderTargetPosition,
-               false, depthStencilViewHeap.CPUDescriptorHandleForHeapStart + device.GetDescriptorHandleIncrementSize(DescriptorHeapType.DepthStencilView));
+                depthStencilViewHeap.CPUDescriptorHandleForHeapStart + device.GetDescriptorHandleIncrementSize(DescriptorHeapType.DepthStencilView));
             commandList.SetViewport(new ViewportF(0, 0, TargetSize, TargetSize));
             commandList.SetScissorRectangles(new Rectangle(0, 0, TargetSize, TargetSize));
 
@@ -620,7 +620,7 @@ namespace D3D12HelloRenderTarget
 
 
             //set render target and depth stencil
-            commandList.SetRenderTargets(1, rtvHandle, false, dsvHandle);
+            commandList.SetRenderTargets(1, rtvHandle, dsvHandle);
 
             // Record commands.
             commandList.ClearRenderTargetView(rtvHandle, new Color4(0, 0.2F, 0.4f, 1), 0, null);

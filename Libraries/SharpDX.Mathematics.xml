@@ -71,6 +71,100 @@
             Wraps this SharpDX.AngleSingle to be in the range [0, 2π).
             </summary>
         </member>
+        <member name="P:SharpDX.AngleSingle.Revolutions">
+            <summary>
+            Gets or sets the total number of revolutions this SharpDX.AngleSingle represents.
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.Degrees">
+            <summary>
+            Gets or sets the total number of degrees this SharpDX.AngleSingle represents.
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.Minutes">
+            <summary>
+            Gets or sets the minutes component of the degrees this SharpDX.AngleSingle represents.
+            When setting the minutes, if the value is in the range (-60, 60) the whole degrees are
+            not changed; otherwise, the whole degrees may be changed. Fractional values may set
+            the seconds component.
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.Seconds">
+            <summary>
+            Gets or sets the seconds of the degrees this SharpDX.AngleSingle represents.
+            When setting the seconds, if the value is in the range (-60, 60) the whole minutes
+            or whole degrees are not changed; otherwise, the whole minutes or whole degrees
+            may be changed.
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.Radians">
+            <summary>
+            Gets or sets the total number of radians this SharpDX.AngleSingle represents.
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.Milliradians">
+            <summary>
+            Gets or sets the total number of milliradians this SharpDX.AngleSingle represents.
+            One milliradian is equal to 1/(2000π).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.Gradians">
+            <summary>
+            Gets or sets the total number of gradians this SharpDX.AngleSingle represents.
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.IsRight">
+            <summary>
+            Gets a System.Boolean that determines whether this SharpDX.Angle
+            is a right angle (i.e. 90° or π/2).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.IsStraight">
+            <summary>
+            Gets a System.Boolean that determines whether this SharpDX.Angle
+            is a straight angle (i.e. 180° or π).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.IsFullRotation">
+            <summary>
+            Gets a System.Boolean that determines whether this SharpDX.Angle
+            is a full rotation angle (i.e. 360° or 2π).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.IsOblique">
+            <summary>
+            Gets a System.Boolean that determines whether this SharpDX.Angle
+            is an oblique angle (i.e. is not 90° or a multiple of 90°).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.IsAcute">
+            <summary>
+            Gets a System.Boolean that determines whether this SharpDX.Angle
+            is an acute angle (i.e. less than 90° but greater than 0°).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.IsObtuse">
+            <summary>
+            Gets a System.Boolean that determines whether this SharpDX.Angle
+            is an obtuse angle (i.e. greater than 90° but less than 180°).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.IsReflex">
+            <summary>
+            Gets a System.Boolean that determines whether this SharpDX.Angle
+            is a reflex angle (i.e. greater than 180° but less than 360°).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.Complement">
+            <summary>
+            Gets a SharpDX.AngleSingle instance that complements this angle (i.e. the two angles add to 90°).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.Supplement">
+            <summary>
+            Gets a SharpDX.AngleSingle instance that supplements this angle (i.e. the two angles add to 180°).
+            </summary>
+        </member>
         <member name="M:SharpDX.AngleSingle.Wrap(SharpDX.AngleSingle)">
             <summary>
             Wraps the SharpDX.AngleSingle given in the value argument to be in the range [π, -π].
@@ -132,6 +226,26 @@
             <param name="left">The numerator object.</param>
             <param name="right">The denominator object.</param>
             <returns>The value of the two objects divided.</returns>
+        </member>
+        <member name="P:SharpDX.AngleSingle.ZeroAngle">
+            <summary>
+            Gets a new SharpDX.AngleSingle instance that represents the zero angle (i.e. 0°).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.RightAngle">
+            <summary>
+            Gets a new SharpDX.AngleSingle instance that represents the right angle (i.e. 90° or π/2).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.StraightAngle">
+            <summary>
+            Gets a new SharpDX.AngleSingle instance that represents the straight angle (i.e. 180° or π).
+            </summary>
+        </member>
+        <member name="P:SharpDX.AngleSingle.FullRotationAngle">
+            <summary>
+            Gets a new SharpDX.AngleSingle instance that represents the full rotation angle (i.e. 360° or 2π).
+            </summary>
         </member>
         <member name="M:SharpDX.AngleSingle.op_Equality(SharpDX.AngleSingle,SharpDX.AngleSingle)">
             <summary>
@@ -330,124 +444,18 @@
             object; otherwise, false.
             </returns>
         </member>
-        <member name="P:SharpDX.AngleSingle.Revolutions">
-            <summary>
-            Gets or sets the total number of revolutions this SharpDX.AngleSingle represents.
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.Degrees">
-            <summary>
-            Gets or sets the total number of degrees this SharpDX.AngleSingle represents.
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.Minutes">
-            <summary>
-            Gets or sets the minutes component of the degrees this SharpDX.AngleSingle represents.
-            When setting the minutes, if the value is in the range (-60, 60) the whole degrees are
-            not changed; otherwise, the whole degrees may be changed. Fractional values may set
-            the seconds component.
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.Seconds">
-            <summary>
-            Gets or sets the seconds of the degrees this SharpDX.AngleSingle represents.
-            When setting the seconds, if the value is in the range (-60, 60) the whole minutes
-            or whole degrees are not changed; otherwise, the whole minutes or whole degrees
-            may be changed.
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.Radians">
-            <summary>
-            Gets or sets the total number of radians this SharpDX.AngleSingle represents.
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.Milliradians">
-            <summary>
-            Gets or sets the total number of milliradians this SharpDX.AngleSingle represents.
-            One milliradian is equal to 1/(2000π).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.Gradians">
-            <summary>
-            Gets or sets the total number of gradians this SharpDX.AngleSingle represents.
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.IsRight">
-            <summary>
-            Gets a System.Boolean that determines whether this SharpDX.Angle
-            is a right angle (i.e. 90° or π/2).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.IsStraight">
-            <summary>
-            Gets a System.Boolean that determines whether this SharpDX.Angle
-            is a straight angle (i.e. 180° or π).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.IsFullRotation">
-            <summary>
-            Gets a System.Boolean that determines whether this SharpDX.Angle
-            is a full rotation angle (i.e. 360° or 2π).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.IsOblique">
-            <summary>
-            Gets a System.Boolean that determines whether this SharpDX.Angle
-            is an oblique angle (i.e. is not 90° or a multiple of 90°).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.IsAcute">
-            <summary>
-            Gets a System.Boolean that determines whether this SharpDX.Angle
-            is an acute angle (i.e. less than 90° but greater than 0°).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.IsObtuse">
-            <summary>
-            Gets a System.Boolean that determines whether this SharpDX.Angle
-            is an obtuse angle (i.e. greater than 90° but less than 180°).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.IsReflex">
-            <summary>
-            Gets a System.Boolean that determines whether this SharpDX.Angle
-            is a reflex angle (i.e. greater than 180° but less than 360°).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.Complement">
-            <summary>
-            Gets a SharpDX.AngleSingle instance that complements this angle (i.e. the two angles add to 90°).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.Supplement">
-            <summary>
-            Gets a SharpDX.AngleSingle instance that supplements this angle (i.e. the two angles add to 180°).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.ZeroAngle">
-            <summary>
-            Gets a new SharpDX.AngleSingle instance that represents the zero angle (i.e. 0°).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.RightAngle">
-            <summary>
-            Gets a new SharpDX.AngleSingle instance that represents the right angle (i.e. 90° or π/2).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.StraightAngle">
-            <summary>
-            Gets a new SharpDX.AngleSingle instance that represents the straight angle (i.e. 180° or π).
-            </summary>
-        </member>
-        <member name="P:SharpDX.AngleSingle.FullRotationAngle">
-            <summary>
-            Gets a new SharpDX.AngleSingle instance that represents the full rotation angle (i.e. 360° or 2π).
-            </summary>
-        </member>
         <member name="T:SharpDX.Mathematics.AssemblyDoc">
             <summary>
             The <see cref="A:SharpDX.Mathematics"/> assembly is a managed Math API.
             </summary>
+        </member>
+        <member name="T:SharpDX.Mathematics.NamespaceDoc">
+            <summary>
+            The <see cref="N:SharpDX.Mathematics"/> namespace provides managed Direct3D Compiler API.
+            </summary>
+            <msdn-id>dd607340</msdn-id>
+            <unmanaged>Math</unmanaged>	
+            <unmanaged-short>Math</unmanaged-short>	
         </member>
         <member name="T:SharpDX.Bool4">
             <summary>
@@ -456,37 +464,37 @@
         </member>
         <member name="F:SharpDX.Bool4.SizeInBytes">
             <summary>
-            The size of the <see cref="T:SharpDX.Bool4"/> type, in bytes.
+            The size of the <see cref = "T:SharpDX.Bool4" /> type, in bytes.
             </summary>
         </member>
         <member name="F:SharpDX.Bool4.False">
             <summary>
-            A <see cref="T:SharpDX.Bool4"/> with all of its components set to false.
+            A <see cref = "T:SharpDX.Bool4" /> with all of its components set to false.
             </summary>
         </member>
         <member name="F:SharpDX.Bool4.UnitX">
             <summary>
-            The X unit <see cref="T:SharpDX.Bool4"/> (true, 0, 0, 0).
+            The X unit <see cref = "T:SharpDX.Bool4" /> (true, 0, 0, 0).
             </summary>
         </member>
         <member name="F:SharpDX.Bool4.UnitY">
             <summary>
-            The Y unit <see cref="T:SharpDX.Bool4"/> (0, true, 0, 0).
+            The Y unit <see cref = "T:SharpDX.Bool4" /> (0, true, 0, 0).
             </summary>
         </member>
         <member name="F:SharpDX.Bool4.UnitZ">
             <summary>
-            The Z unit <see cref="T:SharpDX.Bool4"/> (0, 0, true, 0).
+            The Z unit <see cref = "T:SharpDX.Bool4" /> (0, 0, true, 0).
             </summary>
         </member>
         <member name="F:SharpDX.Bool4.UnitW">
             <summary>
-            The W unit <see cref="T:SharpDX.Bool4"/> (0, 0, 0, true).
+            The W unit <see cref = "T:SharpDX.Bool4" /> (0, 0, 0, true).
             </summary>
         </member>
         <member name="F:SharpDX.Bool4.One">
             <summary>
-            A <see cref="T:SharpDX.Bool4"/> with all of its components set to true.
+            A <see cref = "T:SharpDX.Bool4" /> with all of its components set to true.
             </summary>
         </member>
         <member name="F:SharpDX.Bool4.iX">
@@ -509,28 +517,57 @@
             The W component of the vector.
             </summary>
         </member>
+        <member name="P:SharpDX.Bool4.X">
+            <summary>
+            The X component of the vector.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Bool4.Y">
+            <summary>
+            The Y component of the vector.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Bool4.Z">
+            <summary>
+            The Z component of the vector.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Bool4.W">
+            <summary>
+            The W component of the vector.
+            </summary>
+        </member>
         <member name="M:SharpDX.Bool4.#ctor(System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:SharpDX.Bool4"/> struct.
+            Initializes a new instance of the <see cref = "T:SharpDX.Bool4" /> struct.
             </summary>
-            <param name="value">The value that will be assigned to all components.</param>
+            <param name = "value">The value that will be assigned to all components.</param>
         </member>
         <member name="M:SharpDX.Bool4.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:SharpDX.Bool4"/> struct.
+            Initializes a new instance of the <see cref = "T:SharpDX.Bool4" /> struct.
             </summary>
-            <param name="x">Initial value for the X component of the vector.</param>
-            <param name="y">Initial value for the Y component of the vector.</param>
-            <param name="z">Initial value for the Z component of the vector.</param>
-            <param name="w">Initial value for the W component of the vector.</param>
+            <param name = "x">Initial value for the X component of the vector.</param>
+            <param name = "y">Initial value for the Y component of the vector.</param>
+            <param name = "z">Initial value for the Z component of the vector.</param>
+            <param name = "w">Initial value for the W component of the vector.</param>
         </member>
         <member name="M:SharpDX.Bool4.#ctor(System.Boolean[])">
             <summary>
-            Initializes a new instance of the <see cref="T:SharpDX.Bool4"/> struct.
+            Initializes a new instance of the <see cref = "T:SharpDX.Bool4" /> struct.
             </summary>
-            <param name="values">The values to assign to the X, Y, Z, and W components of the vector. This must be an array with four elements.</param>
-            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than four elements.</exception>
+            <param name = "values">The values to assign to the X, Y, Z, and W components of the vector. This must be an array with four elements.</param>
+            <exception cref = "T:System.ArgumentNullException">Thrown when <paramref name = "values" /> is <c>null</c>.</exception>
+            <exception cref = "T:System.ArgumentOutOfRangeException">Thrown when <paramref name = "values" /> contains more or less than four elements.</exception>
+        </member>
+        <member name="P:SharpDX.Bool4.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the X, Y, Z, or W component, depending on the index.</value>
+            <param name = "index">The index of the component to access. Use 0 for the X component, 1 for the Y component, 2 for the Z component, and 3 for the W component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref = "T:System.ArgumentOutOfRangeException">Thrown when the <paramref name = "index" /> is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Bool4.ToArray">
             <summary>
@@ -556,10 +593,10 @@
         </member>
         <member name="M:SharpDX.Bool4.ToString">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref = "T:System.String" /> that represents this instance.
             </summary>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref = "T:System.String" /> that represents this instance.
             </returns>
         </member>
         <member name="M:SharpDX.Bool4.ToString(System.String,System.IFormatProvider)">
@@ -582,29 +619,29 @@
         </member>
         <member name="M:SharpDX.Bool4.Equals(SharpDX.Bool4@)">
             <summary>
-            Determines whether the specified <see cref="T:SharpDX.Bool4"/> is equal to this instance.
+            Determines whether the specified <see cref = "T:SharpDX.Bool4" /> is equal to this instance.
             </summary>
-            <param name="other">The <see cref="T:SharpDX.Bool4"/> to compare with this instance.</param>
+            <param name = "other">The <see cref = "T:SharpDX.Bool4" /> to compare with this instance.</param>
             <returns>
-            <c>true</c> if the specified <see cref="T:SharpDX.Bool4"/> is equal to this instance; otherwise, <c>false</c>.
+            <c>true</c> if the specified <see cref = "T:SharpDX.Bool4" /> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member name="M:SharpDX.Bool4.Equals(SharpDX.Bool4)">
             <summary>
-            Determines whether the specified <see cref="T:SharpDX.Bool4"/> is equal to this instance.
+            Determines whether the specified <see cref = "T:SharpDX.Bool4" /> is equal to this instance.
             </summary>
-            <param name="other">The <see cref="T:SharpDX.Bool4"/> to compare with this instance.</param>
+            <param name = "other">The <see cref = "T:SharpDX.Bool4" /> to compare with this instance.</param>
             <returns>
-            <c>true</c> if the specified <see cref="T:SharpDX.Bool4"/> is equal to this instance; otherwise, <c>false</c>.
+            <c>true</c> if the specified <see cref = "T:SharpDX.Bool4" /> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member name="M:SharpDX.Bool4.Equals(System.Object)">
             <summary>
-            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            Determines whether the specified <see cref = "T:System.Object" /> is equal to this instance.
             </summary>
-            <param name="value">The <see cref="T:System.Object"/> to compare with this instance.</param>
+            <param name = "value">The <see cref = "T:System.Object" /> to compare with this instance.</param>
             <returns>
-            <c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+            <c>true</c> if the specified <see cref = "T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member name="M:SharpDX.Bool4.op_Implicit(System.Boolean[])~SharpDX.Bool4">
@@ -634,35 +671,6 @@
             </summary>
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
-        </member>
-        <member name="P:SharpDX.Bool4.X">
-            <summary>
-            The X component of the vector.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Bool4.Y">
-            <summary>
-            The Y component of the vector.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Bool4.Z">
-            <summary>
-            The Z component of the vector.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Bool4.W">
-            <summary>
-            The W component of the vector.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Bool4.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the X, Y, Z, or W component, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the X component, 1 for the Y component, 2 for the Z component, and 3 for the W component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
         </member>
         <member name="T:SharpDX.BoundingBox">
             <summary>
@@ -937,6 +945,41 @@
             <summary>
             Defines a frustum which can be used in frustum culling, zoom to Extents (zoom to fit) operations, 
             (matrix, frustum, camera) interchange, and many kind of intersection testing.
+            </summary>
+        </member>
+        <member name="P:SharpDX.BoundingFrustum.Matrix">
+            <summary>
+            Gets or sets the Matrix that describes this bounding frustum.
+            </summary>
+        </member>
+        <member name="P:SharpDX.BoundingFrustum.Near">
+            <summary>
+            Gets the near plane of the BoundingFrustum.
+            </summary>
+        </member>
+        <member name="P:SharpDX.BoundingFrustum.Far">
+            <summary>
+            Gets the far plane of the BoundingFrustum.
+            </summary>
+        </member>
+        <member name="P:SharpDX.BoundingFrustum.Left">
+            <summary>
+            Gets the left plane of the BoundingFrustum.
+            </summary>
+        </member>
+        <member name="P:SharpDX.BoundingFrustum.Right">
+            <summary>
+            Gets the right plane of the BoundingFrustum.
+            </summary>
+        </member>
+        <member name="P:SharpDX.BoundingFrustum.Top">
+            <summary>
+            Gets the top plane of the BoundingFrustum.
+            </summary>
+        </member>
+        <member name="P:SharpDX.BoundingFrustum.Bottom">
+            <summary>
+            Gets the bottom plane of the BoundingFrustum.
             </summary>
         </member>
         <member name="M:SharpDX.BoundingFrustum.#ctor(SharpDX.Matrix)">
@@ -1250,41 +1293,6 @@
             <param name="boundingBox">The bounding box.</param>
             <returns>The zoom to fit vector</returns>
         </member>
-        <member name="P:SharpDX.BoundingFrustum.Matrix">
-            <summary>
-            Gets or sets the Matrix that describes this bounding frustum.
-            </summary>
-        </member>
-        <member name="P:SharpDX.BoundingFrustum.Near">
-            <summary>
-            Gets the near plane of the BoundingFrustum.
-            </summary>
-        </member>
-        <member name="P:SharpDX.BoundingFrustum.Far">
-            <summary>
-            Gets the far plane of the BoundingFrustum.
-            </summary>
-        </member>
-        <member name="P:SharpDX.BoundingFrustum.Left">
-            <summary>
-            Gets the left plane of the BoundingFrustum.
-            </summary>
-        </member>
-        <member name="P:SharpDX.BoundingFrustum.Right">
-            <summary>
-            Gets the right plane of the BoundingFrustum.
-            </summary>
-        </member>
-        <member name="P:SharpDX.BoundingFrustum.Top">
-            <summary>
-            Gets the top plane of the BoundingFrustum.
-            </summary>
-        </member>
-        <member name="P:SharpDX.BoundingFrustum.Bottom">
-            <summary>
-            Gets the bottom plane of the BoundingFrustum.
-            </summary>
-        </member>
         <member name="P:SharpDX.BoundingFrustum.IsOrthographic">
             <summary>
             Indicate whether the current BoundingFrustrum is Orthographic.
@@ -1416,7 +1424,7 @@
         </member>
         <member name="M:SharpDX.BoundingSphere.FromPoints(SharpDX.Vector3[],System.Int32,System.Int32,SharpDX.BoundingSphere@)">
             <summary>
-            Constructs a <see cref="T:SharpDX.BoundingSphere"/> that fully contains the given points.
+            Constructs a <see cref="T:SharpDX.BoundingSphere" /> that fully contains the given points.
             </summary>
             <param name="points">The points that will be contained by the sphere.</param>
             <param name="start">The start index from points array to start compute the bounding sphere.</param>
@@ -2058,6 +2066,15 @@
             <param name="values">The values to assign to the alpha, red, green, and blue components of the color. This must be an array with four elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than four elements.</exception>
+        </member>
+        <member name="P:SharpDX.Color.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the alpha, red, green, or blue component, depending on the index.</value>
+            <param name="index">The index of the component to access. Use 0 for the alpha component, 1 for the red component, 2 for the green component, and 3 for the blue component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Color.ToBgra">
             <summary>
@@ -3329,15 +3346,6 @@
             YellowGreen color.
             </summary>
         </member>
-        <member name="P:SharpDX.Color.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the alpha, red, green, or blue component, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the alpha component, 1 for the red component, 2 for the green component, and 3 for the blue component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
-        </member>
         <member name="T:SharpDX.Color3">
             <summary>
             Represents a color in the form of rgb.
@@ -3402,6 +3410,15 @@
             <param name="values">The values to assign to the red, green, and blue components of the color. This must be an array with three elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than four elements.</exception>
+        </member>
+        <member name="P:SharpDX.Color3.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the red, green, or blue component, depending on the index.</value>
+            <param name="index">The index of the component to access. Use 0 for the red component, 1 for the green component, and 2 for the blue component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 2].</exception>
         </member>
         <member name="M:SharpDX.Color3.ToRgba">
             <summary>
@@ -3830,15 +3847,6 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="P:SharpDX.Color3.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the red, green, or blue component, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the red component, 1 for the green component, and 2 for the blue component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 2].</exception>
-        </member>
         <member name="T:SharpDX.Color4">
             <summary>
             Represents a color in the form of rgba.
@@ -3934,6 +3942,15 @@
             </summary>
             <param name="color"><see cref="T:SharpDX.Color3"/> used to initialize the color.</param>
             <param name="alpha">The alpha component of the color.</param>
+        </member>
+        <member name="P:SharpDX.Color4.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the red, green, blue, and alpha components, depending on the index.</value>
+            <param name="index">The index of the component to access. Use 0 for the alpha component, 1 for the red component, 2 for the green component, and 3 for the blue component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Color4.ToBgra">
             <summary>
@@ -4409,15 +4426,6 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="P:SharpDX.Color4.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the red, green, blue, and alpha components, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the alpha component, 1 for the red component, 2 for the green component, and 3 for the blue component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
-        </member>
         <member name="T:SharpDX.ColorBGRA">
             <summary>
             Represents a 32-bit color (4 bytes) in the form of BGRA (in byte order: B, G, B, A).
@@ -4513,6 +4521,15 @@
             <param name="values">The values to assign to the red, green, and blue, alpha components of the color. This must be an array with four elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than four elements.</exception>
+        </member>
+        <member name="P:SharpDX.ColorBGRA.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the alpha, red, green, or blue component, depending on the index.</value>
+            <param name="index">The index of the component to access. Use 0 for the alpha component, 1 for the red component, 2 for the green component, and 3 for the blue component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.ColorBGRA.ToBgra">
             <summary>
@@ -5055,15 +5072,6 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="P:SharpDX.ColorBGRA.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the alpha, red, green, or blue component, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the alpha component, 1 for the red component, 2 for the green component, and 3 for the blue component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
-        </member>
         <member name="T:SharpDX.AngleType">
             <summary>
             Describes the type of angle.
@@ -5241,6 +5249,11 @@
             </summary>
             <param name = "rawvalue">The floating point value that should be stored in 16 bit format.</param>
         </member>
+        <member name="P:SharpDX.Half.RawValue">
+            <summary>
+            Gets or sets the raw 16 bit value used to back this half-float.
+            </summary>
+        </member>
         <member name="M:SharpDX.Half.ConvertToFloat(SharpDX.Half[])">
             <summary>
             Converts an array of half precision values into full precision values.
@@ -5324,11 +5337,6 @@
             <param name = "obj">Object to make the comparison with.</param>
             <returns>
             <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
-        </member>
-        <member name="P:SharpDX.Half.RawValue">
-            <summary>
-            Gets or sets the raw 16 bit value used to back this half-float.
-            </summary>
         </member>
         <member name="T:SharpDX.Half2">
             <summary>
@@ -5756,32 +5764,32 @@
         </member>
         <member name="F:SharpDX.Int3.SizeInBytes">
             <summary>
-            The size of the <see cref="T:SharpDX.Int3"/> type, in bytes.
+            The size of the <see cref = "T:SharpDX.Int3" /> type, in bytes.
             </summary>
         </member>
         <member name="F:SharpDX.Int3.Zero">
             <summary>
-            A <see cref="T:SharpDX.Int3"/> with all of its components set to zero.
+            A <see cref = "T:SharpDX.Int3" /> with all of its components set to zero.
             </summary>
         </member>
         <member name="F:SharpDX.Int3.UnitX">
             <summary>
-            The X unit <see cref="T:SharpDX.Int3"/> (1, 0, 0).
+            The X unit <see cref = "T:SharpDX.Int3" /> (1, 0, 0).
             </summary>
         </member>
         <member name="F:SharpDX.Int3.UnitY">
             <summary>
-            The Y unit <see cref="T:SharpDX.Int3"/> (0, 1, 0).
+            The Y unit <see cref = "T:SharpDX.Int3" /> (0, 1, 0).
             </summary>
         </member>
         <member name="F:SharpDX.Int3.UnitZ">
             <summary>
-            The Z unit <see cref="T:SharpDX.Int3"/> (0, 0, 1).
+            The Z unit <see cref = "T:SharpDX.Int3" /> (0, 0, 1).
             </summary>
         </member>
         <member name="F:SharpDX.Int3.One">
             <summary>
-            A <see cref="T:SharpDX.Int3"/> with all of its components set to one.
+            A <see cref = "T:SharpDX.Int3" /> with all of its components set to one.
             </summary>
         </member>
         <member name="F:SharpDX.Int3.X">
@@ -5801,25 +5809,34 @@
         </member>
         <member name="M:SharpDX.Int3.#ctor(System.Int32)">
             <summary>
-            Initializes a new instance of the <see cref="T:SharpDX.Int3"/> struct.
+            Initializes a new instance of the <see cref = "T:SharpDX.Int3" /> struct.
             </summary>
-            <param name="value">The value that will be assigned to all components.</param>
+            <param name = "value">The value that will be assigned to all components.</param>
         </member>
         <member name="M:SharpDX.Int3.#ctor(System.Int32,System.Int32,System.Int32)">
             <summary>
-            Initializes a new instance of the <see cref="T:SharpDX.Int3"/> struct.
+            Initializes a new instance of the <see cref = "T:SharpDX.Int3" /> struct.
             </summary>
-            <param name="x">Initial value for the X component of the vector.</param>
-            <param name="y">Initial value for the Y component of the vector.</param>
-            <param name="z">Initial value for the Z component of the vector.</param>
+            <param name = "x">Initial value for the X component of the vector.</param>
+            <param name = "y">Initial value for the Y component of the vector.</param>
+            <param name = "z">Initial value for the Z component of the vector.</param>
         </member>
         <member name="M:SharpDX.Int3.#ctor(System.Int32[])">
             <summary>
-            Initializes a new instance of the <see cref="T:SharpDX.Int3"/> struct.
+            Initializes a new instance of the <see cref = "T:SharpDX.Int3" /> struct.
             </summary>
-            <param name="values">The values to assign to the X, Y, Z, and W components of the vector. This must be an array with four elements.</param>
-            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than four elements.</exception>
+            <param name = "values">The values to assign to the X, Y, Z, and W components of the vector. This must be an array with four elements.</param>
+            <exception cref = "T:System.ArgumentNullException">Thrown when <paramref name = "values" /> is <c>null</c>.</exception>
+            <exception cref = "T:System.ArgumentOutOfRangeException">Thrown when <paramref name = "values" /> contains more or less than four elements.</exception>
+        </member>
+        <member name="P:SharpDX.Int3.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the X, Y, Z, or W component, depending on the index.</value>
+            <param name = "index">The index of the component to access. Use 0 for the X component, 1 for the Y component, 2 for the Z component, and 3 for the W component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref = "T:System.ArgumentOutOfRangeException">Thrown when the <paramref name = "index" /> is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Int3.ToArray">
             <summary>
@@ -6043,52 +6060,52 @@
         </member>
         <member name="M:SharpDX.Int3.op_Explicit(SharpDX.Int3)~SharpDX.Vector2">
             <summary>
-            Performs an explicit conversion from <see cref="T:SharpDX.Int3"/> to <see cref="T:SharpDX.Vector2"/>.
+            Performs an explicit conversion from <see cref = "T:SharpDX.Int3" /> to <see cref = "T:SharpDX.Vector2" />.
             </summary>
-            <param name="value">The value.</param>
+            <param name = "value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
         <member name="M:SharpDX.Int3.op_Explicit(SharpDX.Int3)~SharpDX.Vector3">
             <summary>
-            Performs an explicit conversion from <see cref="T:SharpDX.Int3"/> to <see cref="T:SharpDX.Vector3"/>.
+            Performs an explicit conversion from <see cref = "T:SharpDX.Int3" /> to <see cref = "T:SharpDX.Vector3" />.
             </summary>
-            <param name="value">The value.</param>
+            <param name = "value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
         <member name="M:SharpDX.Int3.ToString">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref = "T:System.String" /> that represents this instance.
             </summary>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref = "T:System.String" /> that represents this instance.
             </returns>
         </member>
         <member name="M:SharpDX.Int3.ToString(System.String)">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref = "T:System.String" /> that represents this instance.
             </summary>
-            <param name="format">The format.</param>
+            <param name = "format">The format.</param>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref = "T:System.String" /> that represents this instance.
             </returns>
         </member>
         <member name="M:SharpDX.Int3.ToString(System.IFormatProvider)">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref = "T:System.String" /> that represents this instance.
             </summary>
-            <param name="formatProvider">The format provider.</param>
+            <param name = "formatProvider">The format provider.</param>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref = "T:System.String" /> that represents this instance.
             </returns>
         </member>
         <member name="M:SharpDX.Int3.ToString(System.String,System.IFormatProvider)">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref = "T:System.String" /> that represents this instance.
             </summary>
-            <param name="format">The format.</param>
-            <param name="formatProvider">The format provider.</param>
+            <param name = "format">The format.</param>
+            <param name = "formatProvider">The format provider.</param>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref = "T:System.String" /> that represents this instance.
             </returns>
         </member>
         <member name="M:SharpDX.Int3.GetHashCode">
@@ -6101,29 +6118,29 @@
         </member>
         <member name="M:SharpDX.Int3.Equals(SharpDX.Int3@)">
             <summary>
-            Determines whether the specified <see cref="T:SharpDX.Int3"/> is equal to this instance.
+            Determines whether the specified <see cref = "T:SharpDX.Int3" /> is equal to this instance.
             </summary>
-            <param name="other">The <see cref="T:SharpDX.Int3"/> to compare with this instance.</param>
+            <param name = "other">The <see cref = "T:SharpDX.Int3" /> to compare with this instance.</param>
             <returns>
-            <c>true</c> if the specified <see cref="T:SharpDX.Int3"/> is equal to this instance; otherwise, <c>false</c>.
+            <c>true</c> if the specified <see cref = "T:SharpDX.Int3" /> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member name="M:SharpDX.Int3.Equals(SharpDX.Int3)">
             <summary>
-            Determines whether the specified <see cref="T:SharpDX.Int3"/> is equal to this instance.
+            Determines whether the specified <see cref = "T:SharpDX.Int3" /> is equal to this instance.
             </summary>
-            <param name="other">The <see cref="T:SharpDX.Int3"/> to compare with this instance.</param>
+            <param name = "other">The <see cref = "T:SharpDX.Int3" /> to compare with this instance.</param>
             <returns>
-            <c>true</c> if the specified <see cref="T:SharpDX.Int3"/> is equal to this instance; otherwise, <c>false</c>.
+            <c>true</c> if the specified <see cref = "T:SharpDX.Int3" /> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member name="M:SharpDX.Int3.Equals(System.Object)">
             <summary>
-            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            Determines whether the specified <see cref = "T:System.Object" /> is equal to this instance.
             </summary>
-            <param name="value">The <see cref="T:System.Object"/> to compare with this instance.</param>
+            <param name = "value">The <see cref = "T:System.Object" /> to compare with this instance.</param>
             <returns>
-            <c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+            <c>true</c> if the specified <see cref = "T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member name="M:SharpDX.Int3.op_Implicit(System.Int32[])~SharpDX.Int3">
@@ -6154,15 +6171,6 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="P:SharpDX.Int3.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the X, Y, Z, or W component, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the X component, 1 for the Y component, 2 for the Z component, and 3 for the W component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
-        </member>
         <member name="T:SharpDX.Int4">
             <summary>
             Represents a four dimensional mathematical vector.
@@ -6170,37 +6178,37 @@
         </member>
         <member name="F:SharpDX.Int4.SizeInBytes">
             <summary>
-            The size of the <see cref="T:SharpDX.Int4"/> type, in bytes.
+            The size of the <see cref = "T:SharpDX.Int4" /> type, in bytes.
             </summary>
         </member>
         <member name="F:SharpDX.Int4.Zero">
             <summary>
-            A <see cref="T:SharpDX.Int4"/> with all of its components set to zero.
+            A <see cref = "T:SharpDX.Int4" /> with all of its components set to zero.
             </summary>
         </member>
         <member name="F:SharpDX.Int4.UnitX">
             <summary>
-            The X unit <see cref="T:SharpDX.Int4"/> (1, 0, 0, 0).
+            The X unit <see cref = "T:SharpDX.Int4" /> (1, 0, 0, 0).
             </summary>
         </member>
         <member name="F:SharpDX.Int4.UnitY">
             <summary>
-            The Y unit <see cref="T:SharpDX.Int4"/> (0, 1, 0, 0).
+            The Y unit <see cref = "T:SharpDX.Int4" /> (0, 1, 0, 0).
             </summary>
         </member>
         <member name="F:SharpDX.Int4.UnitZ">
             <summary>
-            The Z unit <see cref="T:SharpDX.Int4"/> (0, 0, 1, 0).
+            The Z unit <see cref = "T:SharpDX.Int4" /> (0, 0, 1, 0).
             </summary>
         </member>
         <member name="F:SharpDX.Int4.UnitW">
             <summary>
-            The W unit <see cref="T:SharpDX.Int4"/> (0, 0, 0, 1).
+            The W unit <see cref = "T:SharpDX.Int4" /> (0, 0, 0, 1).
             </summary>
         </member>
         <member name="F:SharpDX.Int4.One">
             <summary>
-            A <see cref="T:SharpDX.Int4"/> with all of its components set to one.
+            A <see cref = "T:SharpDX.Int4" /> with all of its components set to one.
             </summary>
         </member>
         <member name="F:SharpDX.Int4.X">
@@ -6225,26 +6233,35 @@
         </member>
         <member name="M:SharpDX.Int4.#ctor(System.Int32)">
             <summary>
-            Initializes a new instance of the <see cref="T:SharpDX.Int4"/> struct.
+            Initializes a new instance of the <see cref = "T:SharpDX.Int4" /> struct.
             </summary>
-            <param name="value">The value that will be assigned to all components.</param>
+            <param name = "value">The value that will be assigned to all components.</param>
         </member>
         <member name="M:SharpDX.Int4.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
-            Initializes a new instance of the <see cref="T:SharpDX.Int4"/> struct.
+            Initializes a new instance of the <see cref = "T:SharpDX.Int4" /> struct.
             </summary>
-            <param name="x">Initial value for the X component of the vector.</param>
-            <param name="y">Initial value for the Y component of the vector.</param>
-            <param name="z">Initial value for the Z component of the vector.</param>
-            <param name="w">Initial value for the W component of the vector.</param>
+            <param name = "x">Initial value for the X component of the vector.</param>
+            <param name = "y">Initial value for the Y component of the vector.</param>
+            <param name = "z">Initial value for the Z component of the vector.</param>
+            <param name = "w">Initial value for the W component of the vector.</param>
         </member>
         <member name="M:SharpDX.Int4.#ctor(System.Int32[])">
             <summary>
-            Initializes a new instance of the <see cref="T:SharpDX.Int4"/> struct.
+            Initializes a new instance of the <see cref = "T:SharpDX.Int4" /> struct.
             </summary>
-            <param name="values">The values to assign to the X, Y, Z, and W components of the vector. This must be an array with four elements.</param>
-            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than four elements.</exception>
+            <param name = "values">The values to assign to the X, Y, Z, and W components of the vector. This must be an array with four elements.</param>
+            <exception cref = "T:System.ArgumentNullException">Thrown when <paramref name = "values" /> is <c>null</c>.</exception>
+            <exception cref = "T:System.ArgumentOutOfRangeException">Thrown when <paramref name = "values" /> contains more or less than four elements.</exception>
+        </member>
+        <member name="P:SharpDX.Int4.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the X, Y, Z, or W component, depending on the index.</value>
+            <param name = "index">The index of the component to access. Use 0 for the X component, 1 for the Y component, 2 for the Z component, and 3 for the W component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref = "T:System.ArgumentOutOfRangeException">Thrown when the <paramref name = "index" /> is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Int4.ToArray">
             <summary>
@@ -6468,59 +6485,59 @@
         </member>
         <member name="M:SharpDX.Int4.op_Explicit(SharpDX.Int4)~SharpDX.Vector2">
             <summary>
-            Performs an explicit conversion from <see cref="T:SharpDX.Int4"/> to <see cref="T:SharpDX.Vector2"/>.
+            Performs an explicit conversion from <see cref = "T:SharpDX.Int4" /> to <see cref = "T:SharpDX.Vector2" />.
             </summary>
-            <param name="value">The value.</param>
+            <param name = "value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
         <member name="M:SharpDX.Int4.op_Explicit(SharpDX.Int4)~SharpDX.Vector3">
             <summary>
-            Performs an explicit conversion from <see cref="T:SharpDX.Int4"/> to <see cref="T:SharpDX.Vector3"/>.
+            Performs an explicit conversion from <see cref = "T:SharpDX.Int4" /> to <see cref = "T:SharpDX.Vector3" />.
             </summary>
-            <param name="value">The value.</param>
+            <param name = "value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
         <member name="M:SharpDX.Int4.op_Explicit(SharpDX.Int4)~SharpDX.Vector4">
             <summary>
-            Performs an explicit conversion from <see cref="T:SharpDX.Int4"/> to <see cref="T:SharpDX.Vector4"/>.
+            Performs an explicit conversion from <see cref = "T:SharpDX.Int4" /> to <see cref = "T:SharpDX.Vector4" />.
             </summary>
-            <param name="value">The value.</param>
+            <param name = "value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
         <member name="M:SharpDX.Int4.ToString">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref = "T:System.String" /> that represents this instance.
             </summary>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref = "T:System.String" /> that represents this instance.
             </returns>
         </member>
         <member name="M:SharpDX.Int4.ToString(System.String)">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref = "T:System.String" /> that represents this instance.
             </summary>
-            <param name="format">The format.</param>
+            <param name = "format">The format.</param>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref = "T:System.String" /> that represents this instance.
             </returns>
         </member>
         <member name="M:SharpDX.Int4.ToString(System.IFormatProvider)">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref = "T:System.String" /> that represents this instance.
             </summary>
-            <param name="formatProvider">The format provider.</param>
+            <param name = "formatProvider">The format provider.</param>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref = "T:System.String" /> that represents this instance.
             </returns>
         </member>
         <member name="M:SharpDX.Int4.ToString(System.String,System.IFormatProvider)">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents this instance.
+            Returns a <see cref = "T:System.String" /> that represents this instance.
             </summary>
-            <param name="format">The format.</param>
-            <param name="formatProvider">The format provider.</param>
+            <param name = "format">The format.</param>
+            <param name = "formatProvider">The format provider.</param>
             <returns>
-            A <see cref="T:System.String"/> that represents this instance.
+            A <see cref = "T:System.String" /> that represents this instance.
             </returns>
         </member>
         <member name="M:SharpDX.Int4.GetHashCode">
@@ -6533,29 +6550,29 @@
         </member>
         <member name="M:SharpDX.Int4.Equals(SharpDX.Int4@)">
             <summary>
-            Determines whether the specified <see cref="T:SharpDX.Int4"/> is equal to this instance.
+            Determines whether the specified <see cref = "T:SharpDX.Int4" /> is equal to this instance.
             </summary>
-            <param name="other">The <see cref="T:SharpDX.Int4"/> to compare with this instance.</param>
+            <param name = "other">The <see cref = "T:SharpDX.Int4" /> to compare with this instance.</param>
             <returns>
-            <c>true</c> if the specified <see cref="T:SharpDX.Int4"/> is equal to this instance; otherwise, <c>false</c>.
+            <c>true</c> if the specified <see cref = "T:SharpDX.Int4" /> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member name="M:SharpDX.Int4.Equals(SharpDX.Int4)">
             <summary>
-            Determines whether the specified <see cref="T:SharpDX.Int4"/> is equal to this instance.
+            Determines whether the specified <see cref = "T:SharpDX.Int4" /> is equal to this instance.
             </summary>
-            <param name="other">The <see cref="T:SharpDX.Int4"/> to compare with this instance.</param>
+            <param name = "other">The <see cref = "T:SharpDX.Int4" /> to compare with this instance.</param>
             <returns>
-            <c>true</c> if the specified <see cref="T:SharpDX.Int4"/> is equal to this instance; otherwise, <c>false</c>.
+            <c>true</c> if the specified <see cref = "T:SharpDX.Int4" /> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member name="M:SharpDX.Int4.Equals(System.Object)">
             <summary>
-            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            Determines whether the specified <see cref = "T:System.Object" /> is equal to this instance.
             </summary>
-            <param name="value">The <see cref="T:System.Object"/> to compare with this instance.</param>
+            <param name = "value">The <see cref = "T:System.Object" /> to compare with this instance.</param>
             <returns>
-            <c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+            <c>true</c> if the specified <see cref = "T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
         <member name="M:SharpDX.Int4.op_Implicit(System.Int32[])~SharpDX.Int4">
@@ -6585,15 +6602,6 @@
             </summary>
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
-        </member>
-        <member name="P:SharpDX.Int4.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the X, Y, Z, or W component, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the X component, 1 for the Y component, 2 for the Z component, and 3 for the W component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
         </member>
         <member name="F:SharpDX.MathUtil.ZeroTolerance">
             <summary>
@@ -6971,6 +6979,36 @@
             Value at row 4 column 4 of the matrix.
             </summary>
         </member>
+        <member name="P:SharpDX.Matrix.Up">
+            <summary>
+            Gets or sets the up <see cref="T:SharpDX.Vector3"/> of the matrix; that is M21, M22, and M23.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Down">
+            <summary>
+            Gets or sets the down <see cref="T:SharpDX.Vector3"/> of the matrix; that is -M21, -M22, and -M23.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Right">
+            <summary>
+            Gets or sets the right <see cref="T:SharpDX.Vector3"/> of the matrix; that is M11, M12, and M13.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Left">
+            <summary>
+            Gets or sets the left <see cref="T:SharpDX.Vector3"/> of the matrix; that is -M11, -M12, and -M13.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Forward">
+            <summary>
+            Gets or sets the forward <see cref="T:SharpDX.Vector3"/> of the matrix; that is -M31, -M32, and -M33.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Backward">
+            <summary>
+            Gets or sets the backward <see cref="T:SharpDX.Vector3"/> of the matrix; that is M31, M32, and M33.
+            </summary>
+        </member>
         <member name="M:SharpDX.Matrix.#ctor(System.Single)">
             <summary>
             Initializes a new instance of the <see cref="T:SharpDX.Matrix"/> struct.
@@ -7005,6 +7043,83 @@
             <param name="values">The values to assign to the components of the matrix. This must be an array with sixteen elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than sixteen elements.</exception>
+        </member>
+        <member name="P:SharpDX.Matrix.Row1">
+            <summary>
+            Gets or sets the first row in the matrix; that is M11, M12, M13, and M14.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Row2">
+            <summary>
+            Gets or sets the second row in the matrix; that is M21, M22, M23, and M24.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Row3">
+            <summary>
+            Gets or sets the third row in the matrix; that is M31, M32, M33, and M34.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Row4">
+            <summary>
+            Gets or sets the fourth row in the matrix; that is M41, M42, M43, and M44.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Column1">
+            <summary>
+            Gets or sets the first column in the matrix; that is M11, M21, M31, and M41.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Column2">
+            <summary>
+            Gets or sets the second column in the matrix; that is M12, M22, M32, and M42.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Column3">
+            <summary>
+            Gets or sets the third column in the matrix; that is M13, M23, M33, and M43.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.Column4">
+            <summary>
+            Gets or sets the fourth column in the matrix; that is M14, M24, M34, and M44.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.TranslationVector">
+            <summary>
+            Gets or sets the translation of the matrix; that is M41, M42, and M43.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.ScaleVector">
+            <summary>
+            Gets or sets the scale of the matrix; that is M11, M22, and M33.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix.IsIdentity">
+            <summary>
+            Gets a value indicating whether this instance is an identity matrix.
+            </summary>
+            <value>
+            <c>true</c> if this instance is an identity matrix; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:SharpDX.Matrix.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the matrix component, depending on the index.</value>
+            <param name="index">The zero-based index of the component to access.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 15].</exception>
+        </member>
+        <member name="P:SharpDX.Matrix.Item(System.Int32,System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the matrix component, depending on the index.</value>
+            <param name="row">The row of the matrix to access.</param>
+            <param name="column">The column of the matrix to access.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="row"/> or <paramref name="column"/>is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Matrix.Determinant">
             <summary>
@@ -8245,113 +8360,6 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="P:SharpDX.Matrix.Up">
-            <summary>
-            Gets or sets the up <see cref="T:SharpDX.Vector3"/> of the matrix; that is M21, M22, and M23.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Down">
-            <summary>
-            Gets or sets the down <see cref="T:SharpDX.Vector3"/> of the matrix; that is -M21, -M22, and -M23.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Right">
-            <summary>
-            Gets or sets the right <see cref="T:SharpDX.Vector3"/> of the matrix; that is M11, M12, and M13.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Left">
-            <summary>
-            Gets or sets the left <see cref="T:SharpDX.Vector3"/> of the matrix; that is -M11, -M12, and -M13.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Forward">
-            <summary>
-            Gets or sets the forward <see cref="T:SharpDX.Vector3"/> of the matrix; that is -M31, -M32, and -M33.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Backward">
-            <summary>
-            Gets or sets the backward <see cref="T:SharpDX.Vector3"/> of the matrix; that is M31, M32, and M33.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Row1">
-            <summary>
-            Gets or sets the first row in the matrix; that is M11, M12, M13, and M14.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Row2">
-            <summary>
-            Gets or sets the second row in the matrix; that is M21, M22, M23, and M24.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Row3">
-            <summary>
-            Gets or sets the third row in the matrix; that is M31, M32, M33, and M34.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Row4">
-            <summary>
-            Gets or sets the fourth row in the matrix; that is M41, M42, M43, and M44.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Column1">
-            <summary>
-            Gets or sets the first column in the matrix; that is M11, M21, M31, and M41.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Column2">
-            <summary>
-            Gets or sets the second column in the matrix; that is M12, M22, M32, and M42.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Column3">
-            <summary>
-            Gets or sets the third column in the matrix; that is M13, M23, M33, and M43.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.Column4">
-            <summary>
-            Gets or sets the fourth column in the matrix; that is M14, M24, M34, and M44.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.TranslationVector">
-            <summary>
-            Gets or sets the translation of the matrix; that is M41, M42, and M43.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.ScaleVector">
-            <summary>
-            Gets or sets the scale of the matrix; that is M11, M22, and M33.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix.IsIdentity">
-            <summary>
-            Gets a value indicating whether this instance is an identity matrix.
-            </summary>
-            <value>
-            <c>true</c> if this instance is an identity matrix; otherwise, <c>false</c>.
-            </value>
-        </member>
-        <member name="P:SharpDX.Matrix.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the matrix component, depending on the index.</value>
-            <param name="index">The zero-based index of the component to access.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 15].</exception>
-        </member>
-        <member name="P:SharpDX.Matrix.Item(System.Int32,System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the matrix component, depending on the index.</value>
-            <param name="row">The row of the matrix to access.</param>
-            <param name="column">The column of the matrix to access.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="row"/> or <paramref name="column"/>is out of the range [0, 3].</exception>
-        </member>
         <member name="T:SharpDX.Matrix3x2">
             <summary>
             Direct2D Matrix3x2. Supports implicit cast from <see cref="T:SharpDX.Matrix"/>.
@@ -8417,6 +8425,68 @@
             <param name="values">The values to assign to the components of the matrix. This must be an array with six elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than six elements.</exception>
+        </member>
+        <member name="P:SharpDX.Matrix3x2.Row1">
+            <summary>
+            Gets or sets the first row in the matrix; that is M11 and M12.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x2.Row2">
+            <summary>
+            Gets or sets the second row in the matrix; that is M21 and M22.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x2.Row3">
+            <summary>
+            Gets or sets the third row in the matrix; that is M31 and M32.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x2.Column1">
+            <summary>
+            Gets or sets the first column in the matrix; that is M11, M21, and M31.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x2.Column2">
+            <summary>
+            Gets or sets the second column in the matrix; that is M12, M22, and M32.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x2.TranslationVector">
+            <summary>
+            Gets or sets the translation of the matrix; that is M31 and M32.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x2.ScaleVector">
+            <summary>
+            Gets or sets the scale of the matrix; that is M11 and M22.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x2.IsIdentity">
+            <summary>
+            Gets a value indicating whether this instance is an identity matrix.
+            </summary>
+            <value>
+            <c>true</c> if this instance is an identity matrix; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:SharpDX.Matrix3x2.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the matrix component, depending on the index.</value>
+            <param name="index">The zero-based index of the component to access.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 5].</exception>
+        </member>
+        <member name="P:SharpDX.Matrix3x2.Item(System.Int32,System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the matrix component, depending on the index.</value>
+            <param name="row">The row of the matrix to access.</param>
+            <param name="column">The column of the matrix to access.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="row"/> or <paramref name="column"/>is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Matrix3x2.ToArray">
             <summary>
@@ -8940,68 +9010,6 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="P:SharpDX.Matrix3x2.Row1">
-            <summary>
-            Gets or sets the first row in the matrix; that is M11 and M12.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x2.Row2">
-            <summary>
-            Gets or sets the second row in the matrix; that is M21 and M22.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x2.Row3">
-            <summary>
-            Gets or sets the third row in the matrix; that is M31 and M32.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x2.Column1">
-            <summary>
-            Gets or sets the first column in the matrix; that is M11, M21, and M31.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x2.Column2">
-            <summary>
-            Gets or sets the second column in the matrix; that is M12, M22, and M32.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x2.TranslationVector">
-            <summary>
-            Gets or sets the translation of the matrix; that is M31 and M32.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x2.ScaleVector">
-            <summary>
-            Gets or sets the scale of the matrix; that is M11 and M22.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x2.IsIdentity">
-            <summary>
-            Gets a value indicating whether this instance is an identity matrix.
-            </summary>
-            <value>
-            <c>true</c> if this instance is an identity matrix; otherwise, <c>false</c>.
-            </value>
-        </member>
-        <member name="P:SharpDX.Matrix3x2.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the matrix component, depending on the index.</value>
-            <param name="index">The zero-based index of the component to access.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 5].</exception>
-        </member>
-        <member name="P:SharpDX.Matrix3x2.Item(System.Int32,System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the matrix component, depending on the index.</value>
-            <param name="row">The row of the matrix to access.</param>
-            <param name="column">The column of the matrix to access.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="row"/> or <paramref name="column"/>is out of the range [0, 3].</exception>
-        </member>
         <member name="T:SharpDX.Matrix3x3">
             <summary>
             Represents a 3x3 Matrix ( contains only Scale and Rotation ).
@@ -9094,6 +9102,68 @@
             <param name="values">The values to assign to the components of the Matrix3x3. This must be an array with sixteen elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than sixteen elements.</exception>
+        </member>
+        <member name="P:SharpDX.Matrix3x3.Row1">
+            <summary>
+            Gets or sets the first row in the Matrix3x3; that is M11, M12, M13
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x3.Row2">
+            <summary>
+            Gets or sets the second row in the Matrix3x3; that is M21, M22, M23
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x3.Row3">
+            <summary>
+            Gets or sets the third row in the Matrix3x3; that is M31, M32, M33
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x3.Column1">
+            <summary>
+            Gets or sets the first column in the Matrix3x3; that is M11, M21, M31
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x3.Column2">
+            <summary>
+            Gets or sets the second column in the Matrix3x3; that is M12, M22, M32
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x3.Column3">
+            <summary>
+            Gets or sets the third column in the Matrix3x3; that is M13, M23, M33
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x3.ScaleVector">
+            <summary>
+            Gets or sets the scale of the Matrix3x3; that is M11, M22, and M33.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix3x3.IsIdentity">
+            <summary>
+            Gets a value indicating whether this instance is an identity Matrix3x3.
+            </summary>
+            <value>
+            <c>true</c> if this instance is an identity Matrix3x3; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:SharpDX.Matrix3x3.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the Matrix3x3 component, depending on the index.</value>
+            <param name="index">The zero-based index of the component to access.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 15].</exception>
+        </member>
+        <member name="P:SharpDX.Matrix3x3.Item(System.Int32,System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the Matrix3x3 component, depending on the index.</value>
+            <param name="row">The row of the Matrix3x3 to access.</param>
+            <param name="column">The column of the Matrix3x3 to access.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="row"/> or <paramref name="column"/>is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Matrix3x3.Determinant">
             <summary>
@@ -9933,68 +10003,6 @@
             <c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
-        <member name="P:SharpDX.Matrix3x3.Row1">
-            <summary>
-            Gets or sets the first row in the Matrix3x3; that is M11, M12, M13
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x3.Row2">
-            <summary>
-            Gets or sets the second row in the Matrix3x3; that is M21, M22, M23
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x3.Row3">
-            <summary>
-            Gets or sets the third row in the Matrix3x3; that is M31, M32, M33
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x3.Column1">
-            <summary>
-            Gets or sets the first column in the Matrix3x3; that is M11, M21, M31
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x3.Column2">
-            <summary>
-            Gets or sets the second column in the Matrix3x3; that is M12, M22, M32
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x3.Column3">
-            <summary>
-            Gets or sets the third column in the Matrix3x3; that is M13, M23, M33
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x3.ScaleVector">
-            <summary>
-            Gets or sets the scale of the Matrix3x3; that is M11, M22, and M33.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix3x3.IsIdentity">
-            <summary>
-            Gets a value indicating whether this instance is an identity Matrix3x3.
-            </summary>
-            <value>
-            <c>true</c> if this instance is an identity Matrix3x3; otherwise, <c>false</c>.
-            </value>
-        </member>
-        <member name="P:SharpDX.Matrix3x3.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the Matrix3x3 component, depending on the index.</value>
-            <param name="index">The zero-based index of the component to access.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 15].</exception>
-        </member>
-        <member name="P:SharpDX.Matrix3x3.Item(System.Int32,System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the Matrix3x3 component, depending on the index.</value>
-            <param name="row">The row of the Matrix3x3 to access.</param>
-            <param name="column">The column of the Matrix3x3 to access.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="row"/> or <paramref name="column"/>is out of the range [0, 3].</exception>
-        </member>
         <member name="T:SharpDX.Matrix5x4">
             <summary>
             Represents a 4x4 mathematical Matrix5x4.
@@ -10153,6 +10161,68 @@
             <param name="values">The values to assign to the components of the Matrix5x4. This must be an array with sixteen elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than sixteen elements.</exception>
+        </member>
+        <member name="P:SharpDX.Matrix5x4.Row1">
+            <summary>
+            Gets or sets the first row in the Matrix5x4; that is M11, M12, M13, and M14.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix5x4.Row2">
+            <summary>
+            Gets or sets the second row in the Matrix5x4; that is M21, M22, M23, and M24.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix5x4.Row3">
+            <summary>
+            Gets or sets the third row in the Matrix5x4; that is M31, M32, M33, and M34.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix5x4.Row4">
+            <summary>
+            Gets or sets the fourth row in the Matrix5x4; that is M41, M42, M43, and M44.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix5x4.Row5">
+            <summary>
+            Gets or sets the fifth row in the Matrix5x4; that is M51, M52, M53, and M54.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix5x4.TranslationVector">
+            <summary>
+            Gets or sets the translation of the Matrix5x4; that is M41, M42, and M43.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix5x4.ScaleVector">
+            <summary>
+            Gets or sets the scale of the Matrix5x4; that is M11, M22, and M33.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Matrix5x4.IsIdentity">
+            <summary>
+            Gets a value indicating whether this instance is an identity Matrix5x4.
+            </summary>
+            <value>
+            <c>true</c> if this instance is an identity Matrix5x4; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:SharpDX.Matrix5x4.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the Matrix5x4 component, depending on the index.</value>
+            <param name="index">The zero-based index of the component to access.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 15].</exception>
+        </member>
+        <member name="P:SharpDX.Matrix5x4.Item(System.Int32,System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the Matrix5x4 component, depending on the index.</value>
+            <param name="row">The row of the Matrix5x4 to access.</param>
+            <param name="column">The column of the Matrix5x4 to access.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="row"/> or <paramref name="column"/>is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Matrix5x4.Add(SharpDX.Matrix5x4@,SharpDX.Matrix5x4@,SharpDX.Matrix5x4@)">
             <summary>
@@ -10481,76 +10551,6 @@
             <c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
-        <member name="P:SharpDX.Matrix5x4.Row1">
-            <summary>
-            Gets or sets the first row in the Matrix5x4; that is M11, M12, M13, and M14.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix5x4.Row2">
-            <summary>
-            Gets or sets the second row in the Matrix5x4; that is M21, M22, M23, and M24.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix5x4.Row3">
-            <summary>
-            Gets or sets the third row in the Matrix5x4; that is M31, M32, M33, and M34.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix5x4.Row4">
-            <summary>
-            Gets or sets the fourth row in the Matrix5x4; that is M41, M42, M43, and M44.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix5x4.Row5">
-            <summary>
-            Gets or sets the fifth row in the Matrix5x4; that is M51, M52, M53, and M54.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix5x4.TranslationVector">
-            <summary>
-            Gets or sets the translation of the Matrix5x4; that is M41, M42, and M43.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix5x4.ScaleVector">
-            <summary>
-            Gets or sets the scale of the Matrix5x4; that is M11, M22, and M33.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Matrix5x4.IsIdentity">
-            <summary>
-            Gets a value indicating whether this instance is an identity Matrix5x4.
-            </summary>
-            <value>
-            <c>true</c> if this instance is an identity Matrix5x4; otherwise, <c>false</c>.
-            </value>
-        </member>
-        <member name="P:SharpDX.Matrix5x4.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the Matrix5x4 component, depending on the index.</value>
-            <param name="index">The zero-based index of the component to access.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 15].</exception>
-        </member>
-        <member name="P:SharpDX.Matrix5x4.Item(System.Int32,System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the Matrix5x4 component, depending on the index.</value>
-            <param name="row">The row of the Matrix5x4 to access.</param>
-            <param name="column">The column of the Matrix5x4 to access.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="row"/> or <paramref name="column"/>is out of the range [0, 3].</exception>
-        </member>
-        <member name="T:SharpDX.Mathematics.NamespaceDoc">
-            <summary>
-            The <see cref="N:SharpDX.Mathematics"/> namespace provides managed Direct3D Compiler API.
-            </summary>
-            <msdn-id>dd607340</msdn-id>
-            <unmanaged>Math</unmanaged>	
-            <unmanaged-short>Math</unmanaged-short>	
-        </member>
         <member name="T:SharpDX.OrientedBoundingBox">
             <summary>
             OrientedBoundingBox (OBB) is a rectangular block, much like an AABB (BoundingBox) but with an arbitrary orientation.
@@ -10654,6 +10654,15 @@
             </summary>
             <param name="translation">the translation vector.</param>
         </member>
+        <member name="P:SharpDX.OrientedBoundingBox.Size">
+            <summary>
+            The size of the <see cref="T:SharpDX.OrientedBoundingBox"/> if no scaling is applied to the transformation matrix.
+            </summary>
+            <remarks>
+            The property will return the actual size even if the scaling is applied using Scale method, 
+            but if the scaling is applied to transformation matrix, use GetSize Function instead.
+            </remarks>
+        </member>
         <member name="M:SharpDX.OrientedBoundingBox.GetSize">
             <summary>
             Returns the size of the <see cref="T:SharpDX.OrientedBoundingBox"/> taking into consideration the scaling applied to the transformation matrix.
@@ -10669,6 +10678,11 @@
             Returns the square size of the <see cref="T:SharpDX.OrientedBoundingBox"/> taking into consideration the scaling applied to the transformation matrix.
             </summary>
             <returns>The size of the consideration</returns>
+        </member>
+        <member name="P:SharpDX.OrientedBoundingBox.Center">
+            <summary>
+            Returns the center of the <see cref="T:SharpDX.OrientedBoundingBox"/>.
+            </summary>
         </member>
         <member name="M:SharpDX.OrientedBoundingBox.Contains(SharpDX.Vector3@)">
             <summary>
@@ -10686,7 +10700,7 @@
         </member>
         <member name="M:SharpDX.OrientedBoundingBox.Contains(SharpDX.Vector3[])">
             <summary>
-            Determines whether a <see cref="T:SharpDX.OrientedBoundingBox"/> contains an array of points&gt;.
+            Determines whether a <see cref="T:SharpDX.OrientedBoundingBox"/> contains an array of points>.
             </summary>
             <param name="points">The points array to test.</param>
             <returns>The type of containment.</returns>
@@ -10888,20 +10902,6 @@
             A <see cref="T:System.String"/> that represents this instance.
             </returns>
         </member>
-        <member name="P:SharpDX.OrientedBoundingBox.Size">
-            <summary>
-            The size of the <see cref="T:SharpDX.OrientedBoundingBox"/> if no scaling is applied to the transformation matrix.
-            </summary>
-            <remarks>
-            The property will return the actual size even if the scaling is applied using Scale method, 
-            but if the scaling is applied to transformation matrix, use GetSize Function instead.
-            </remarks>
-        </member>
-        <member name="P:SharpDX.OrientedBoundingBox.Center">
-            <summary>
-            Returns the center of the <see cref="T:SharpDX.OrientedBoundingBox"/>.
-            </summary>
-        </member>
         <member name="T:SharpDX.Plane">
             <summary>
             Represents a plane in three dimensional space.
@@ -10961,6 +10961,15 @@
             <param name="values">The values to assign to the A, B, C, and D components of the plane. This must be an array with four elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than four elements.</exception>
+        </member>
+        <member name="P:SharpDX.Plane.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the A, B, C, or D component, depending on the index.</value>
+            <param name="index">The index of the component to access. Use 0 for the A component, 1 for the B component, 2 for the C component, and 3 for the D component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Plane.Normalize">
             <summary>
@@ -11336,15 +11345,6 @@
             <c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
             </returns>
         </member>
-        <member name="P:SharpDX.Plane.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the A, B, C, or D component, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the A component, 1 for the B component, 2 for the C component, and 3 for the D component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
-        </member>
         <member name="T:SharpDX.Point">
             <summary>
             Structure using the same layout than <see cref="!:System.Drawing.Point"/>.
@@ -11532,6 +11532,40 @@
             <param name="values">The values to assign to the X, Y, Z, and W components of the quaternion. This must be an array with four elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than four elements.</exception>
+        </member>
+        <member name="P:SharpDX.Quaternion.IsIdentity">
+            <summary>
+            Gets a value indicating whether this instance is equivalent to the identity quaternion.
+            </summary>
+            <value>
+            <c>true</c> if this instance is an identity quaternion; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:SharpDX.Quaternion.IsNormalized">
+            <summary>
+            Gets a value indicting whether this instance is normalized.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Quaternion.Angle">
+            <summary>
+            Gets the angle of the quaternion.
+            </summary>
+            <value>The quaternion's angle.</value>
+        </member>
+        <member name="P:SharpDX.Quaternion.Axis">
+            <summary>
+            Gets the axis components of the quaternion.
+            </summary>
+            <value>The axis components of the quaternion.</value>
+        </member>
+        <member name="P:SharpDX.Quaternion.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the X, Y, Z, or W component, depending on the index.</value>
+            <param name="index">The index of the component to access. Use 0 for the X component, 1 for the Y component, 2 for the Z component, and 3 for the W component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Quaternion.Conjugate">
             <summary>
@@ -12149,40 +12183,6 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="P:SharpDX.Quaternion.IsIdentity">
-            <summary>
-            Gets a value indicating whether this instance is equivalent to the identity quaternion.
-            </summary>
-            <value>
-            <c>true</c> if this instance is an identity quaternion; otherwise, <c>false</c>.
-            </value>
-        </member>
-        <member name="P:SharpDX.Quaternion.IsNormalized">
-            <summary>
-            Gets a value indicting whether this instance is normalized.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Quaternion.Angle">
-            <summary>
-            Gets the angle of the quaternion.
-            </summary>
-            <value>The quaternion's angle.</value>
-        </member>
-        <member name="P:SharpDX.Quaternion.Axis">
-            <summary>
-            Gets the axis components of the quaternion.
-            </summary>
-            <value>The axis components of the quaternion.</value>
-        </member>
-        <member name="P:SharpDX.Quaternion.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the X, Y, Z, or W component, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the X component, 1 for the Y component, 2 for the Z component, and 3 for the W component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
-        </member>
         <member name="T:SharpDX.RandomUtil">
             <summary>
             Random functions on commun types.
@@ -12606,6 +12606,38 @@
             <param name="width">The width.</param>
             <param name="height">The height.</param>
         </member>
+        <member name="P:SharpDX.Rectangle.X">
+            <summary>
+            Gets or sets the X position.
+            </summary>
+            <value>The X position.</value>
+        </member>
+        <member name="P:SharpDX.Rectangle.Y">
+            <summary>
+            Gets or sets the Y position.
+            </summary>
+            <value>The Y position.</value>
+        </member>
+        <member name="P:SharpDX.Rectangle.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:SharpDX.Rectangle.Height">
+            <summary>
+            Gets or sets the height.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:SharpDX.Rectangle.IsEmpty">
+            <summary>
+            Gets a value that indicates whether the rectangle is empty.
+            </summary>
+            <value>
+              <c>true</c> if [is empty]; otherwise, <c>false</c>.
+            </value>
+        </member>
         <member name="M:SharpDX.Rectangle.Offset(System.Int32,System.Int32)">
             <summary>Changes the position of the rectangle.</summary>
             <param name="offsetX">Change in the x-position.</param>
@@ -12758,38 +12790,6 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="P:SharpDX.Rectangle.X">
-            <summary>
-            Gets or sets the X position.
-            </summary>
-            <value>The X position.</value>
-        </member>
-        <member name="P:SharpDX.Rectangle.Y">
-            <summary>
-            Gets or sets the Y position.
-            </summary>
-            <value>The Y position.</value>
-        </member>
-        <member name="P:SharpDX.Rectangle.Width">
-            <summary>
-            Gets or sets the width.
-            </summary>
-            <value>The width.</value>
-        </member>
-        <member name="P:SharpDX.Rectangle.Height">
-            <summary>
-            Gets or sets the height.
-            </summary>
-            <value>The height.</value>
-        </member>
-        <member name="P:SharpDX.Rectangle.IsEmpty">
-            <summary>
-            Gets a value that indicates whether the rectangle is empty.
-            </summary>
-            <value>
-              <c>true</c> if [is empty]; otherwise, <c>false</c>.
-            </value>
-        </member>
         <member name="T:SharpDX.RectangleF">
             <summary>
             Define a RectangleF. This structure is slightly different from System.Drawing.RectangleF as it is
@@ -12839,6 +12839,84 @@
             <param name="y">The top.</param>
             <param name="width">The width.</param>
             <param name="height">The height.</param>
+        </member>
+        <member name="P:SharpDX.RectangleF.X">
+            <summary>
+            Gets or sets the X position.
+            </summary>
+            <value>The X position.</value>
+        </member>
+        <member name="P:SharpDX.RectangleF.Y">
+            <summary>
+            Gets or sets the Y position.
+            </summary>
+            <value>The Y position.</value>
+        </member>
+        <member name="P:SharpDX.RectangleF.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:SharpDX.RectangleF.Height">
+            <summary>
+            Gets or sets the height.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:SharpDX.RectangleF.Location">
+            <summary>
+            Gets or sets the location.
+            </summary>
+            <value>
+            The location.
+            </value>
+        </member>
+        <member name="P:SharpDX.RectangleF.Center">
+            <summary>
+            Gets the Point that specifies the center of the rectangle.
+            </summary>
+            <value>
+            The center.
+            </value>
+        </member>
+        <member name="P:SharpDX.RectangleF.IsEmpty">
+            <summary>
+            Gets a value that indicates whether the rectangle is empty.
+            </summary>
+            <value>
+              <c>true</c> if [is empty]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:SharpDX.RectangleF.Size">
+            <summary>
+            Gets or sets the size of the rectangle.
+            </summary>
+            <value>The size of the rectangle.</value>
+        </member>
+        <member name="P:SharpDX.RectangleF.TopLeft">
+            <summary>
+            Gets the position of the top-left corner of the rectangle.
+            </summary>
+            <value>The top-left corner of the rectangle.</value>
+        </member>
+        <member name="P:SharpDX.RectangleF.TopRight">
+            <summary>
+            Gets the position of the top-right corner of the rectangle.
+            </summary>
+            <value>The top-right corner of the rectangle.</value>
+        </member>
+        <member name="P:SharpDX.RectangleF.BottomLeft">
+            <summary>
+            Gets the position of the bottom-left corner of the rectangle.
+            </summary>
+            <value>The bottom-left corner of the rectangle.</value>
+        </member>
+        <member name="P:SharpDX.RectangleF.BottomRight">
+            <summary>
+            Gets the position of the bottom-right corner of the rectangle.
+            </summary>
+            <value>The bottom-right corner of the rectangle.</value>
         </member>
         <member name="M:SharpDX.RectangleF.Offset(SharpDX.Point)">
             <summary>Changes the position of the rectangle.</summary>
@@ -13010,84 +13088,6 @@
             <param name="value">The source <see cref="T:SharpDX.RectangleF"/> value.</param>
             <returns>A converted <see cref="T:SharpDX.Rectangle"/> structure.</returns>
         </member>
-        <member name="P:SharpDX.RectangleF.X">
-            <summary>
-            Gets or sets the X position.
-            </summary>
-            <value>The X position.</value>
-        </member>
-        <member name="P:SharpDX.RectangleF.Y">
-            <summary>
-            Gets or sets the Y position.
-            </summary>
-            <value>The Y position.</value>
-        </member>
-        <member name="P:SharpDX.RectangleF.Width">
-            <summary>
-            Gets or sets the width.
-            </summary>
-            <value>The width.</value>
-        </member>
-        <member name="P:SharpDX.RectangleF.Height">
-            <summary>
-            Gets or sets the height.
-            </summary>
-            <value>The height.</value>
-        </member>
-        <member name="P:SharpDX.RectangleF.Location">
-            <summary>
-            Gets or sets the location.
-            </summary>
-            <value>
-            The location.
-            </value>
-        </member>
-        <member name="P:SharpDX.RectangleF.Center">
-            <summary>
-            Gets the Point that specifies the center of the rectangle.
-            </summary>
-            <value>
-            The center.
-            </value>
-        </member>
-        <member name="P:SharpDX.RectangleF.IsEmpty">
-            <summary>
-            Gets a value that indicates whether the rectangle is empty.
-            </summary>
-            <value>
-              <c>true</c> if [is empty]; otherwise, <c>false</c>.
-            </value>
-        </member>
-        <member name="P:SharpDX.RectangleF.Size">
-            <summary>
-            Gets or sets the size of the rectangle.
-            </summary>
-            <value>The size of the rectangle.</value>
-        </member>
-        <member name="P:SharpDX.RectangleF.TopLeft">
-            <summary>
-            Gets the position of the top-left corner of the rectangle.
-            </summary>
-            <value>The top-left corner of the rectangle.</value>
-        </member>
-        <member name="P:SharpDX.RectangleF.TopRight">
-            <summary>
-            Gets the position of the top-right corner of the rectangle.
-            </summary>
-            <value>The top-right corner of the rectangle.</value>
-        </member>
-        <member name="P:SharpDX.RectangleF.BottomLeft">
-            <summary>
-            Gets the position of the bottom-left corner of the rectangle.
-            </summary>
-            <value>The bottom-left corner of the rectangle.</value>
-        </member>
-        <member name="P:SharpDX.RectangleF.BottomRight">
-            <summary>
-            Gets the position of the bottom-right corner of the rectangle.
-            </summary>
-            <value>The bottom-right corner of the rectangle.</value>
-        </member>
         <member name="T:SharpDX.Vector2">
             <summary>
             Represents a two dimensional mathematical vector.
@@ -13148,6 +13148,25 @@
             <param name="values">The values to assign to the X and Y components of the vector. This must be an array with two elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than two elements.</exception>
+        </member>
+        <member name="P:SharpDX.Vector2.IsNormalized">
+            <summary>
+            Gets a value indicting whether this instance is normalized.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Vector2.IsZero">
+            <summary>
+            Gets a value indicting whether this vector is zero
+            </summary>
+        </member>
+        <member name="P:SharpDX.Vector2.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the X or Y component, depending on the index.</value>
+            <param name="index">The index of the component to access. Use 0 for the X component and 1 for the Y component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 1].</exception>
         </member>
         <member name="M:SharpDX.Vector2.Length">
             <summary>
@@ -14015,25 +14034,6 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="P:SharpDX.Vector2.IsNormalized">
-            <summary>
-            Gets a value indicting whether this instance is normalized.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Vector2.IsZero">
-            <summary>
-            Gets a value indicting whether this vector is zero
-            </summary>
-        </member>
-        <member name="P:SharpDX.Vector2.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the X or Y component, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the X component and 1 for the Y component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 1].</exception>
-        </member>
         <member name="T:SharpDX.Vector3">
             <summary>
             Represents a three dimensional mathematical vector.
@@ -14152,6 +14152,25 @@
             <param name="values">The values to assign to the X, Y, and Z components of the vector. This must be an array with three elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than three elements.</exception>
+        </member>
+        <member name="P:SharpDX.Vector3.IsNormalized">
+            <summary>
+            Gets a value indicting whether this instance is normalized.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Vector3.IsZero">
+            <summary>
+            Gets a value indicting whether this vector is zero
+            </summary>
+        </member>
+        <member name="P:SharpDX.Vector3.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the X, Y, or Z component, depending on the index.</value>
+            <param name="index">The index of the component to access. Use 0 for the X component, 1 for the Y component, and 2 for the Z component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 2].</exception>
         </member>
         <member name="M:SharpDX.Vector3.Length">
             <summary>
@@ -15128,25 +15147,6 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="P:SharpDX.Vector3.IsNormalized">
-            <summary>
-            Gets a value indicting whether this instance is normalized.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Vector3.IsZero">
-            <summary>
-            Gets a value indicting whether this vector is zero
-            </summary>
-        </member>
-        <member name="P:SharpDX.Vector3.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the X, Y, or Z component, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the X component, 1 for the Y component, and 2 for the Z component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 2].</exception>
-        </member>
         <member name="T:SharpDX.Vector4">
             <summary>
             Represents a four dimensional mathematical vector.
@@ -15244,6 +15244,25 @@
             <param name="values">The values to assign to the X, Y, Z, and W components of the vector. This must be an array with four elements.</param>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="values"/> is <c>null</c>.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="values"/> contains more or less than four elements.</exception>
+        </member>
+        <member name="P:SharpDX.Vector4.IsNormalized">
+            <summary>
+            Gets a value indicting whether this instance is normalized.
+            </summary>
+        </member>
+        <member name="P:SharpDX.Vector4.IsZero">
+            <summary>
+            Gets a value indicting whether this vector is zero
+            </summary>
+        </member>
+        <member name="P:SharpDX.Vector4.Item(System.Int32)">
+            <summary>
+            Gets or sets the component at the specified index.
+            </summary>
+            <value>The value of the X, Y, Z, or W component, depending on the index.</value>
+            <param name="index">The index of the component to access. Use 0 for the X component, 1 for the Y component, 2 for the Z component, and 3 for the W component.</param>
+            <returns>The value of the component at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
         </member>
         <member name="M:SharpDX.Vector4.Length">
             <summary>
@@ -16007,25 +16026,6 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="P:SharpDX.Vector4.IsNormalized">
-            <summary>
-            Gets a value indicting whether this instance is normalized.
-            </summary>
-        </member>
-        <member name="P:SharpDX.Vector4.IsZero">
-            <summary>
-            Gets a value indicting whether this vector is zero
-            </summary>
-        </member>
-        <member name="P:SharpDX.Vector4.Item(System.Int32)">
-            <summary>
-            Gets or sets the component at the specified index.
-            </summary>
-            <value>The value of the X, Y, Z, or W component, depending on the index.</value>
-            <param name="index">The index of the component to access. Use 0 for the X component, 1 for the Y component, 2 for the Z component, and 3 for the W component.</param>
-            <returns>The value of the component at the specified index.</returns>
-            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <paramref name="index"/> is out of the range [0, 3].</exception>
-        </member>
         <member name="T:SharpDX.Viewport">
             <summary>
             Defines the viewport dimensions.
@@ -16087,6 +16087,12 @@
             </summary>
             <param name="bounds">A bounding box that defines the location and size of the viewport in a render target.</param>
         </member>
+        <member name="P:SharpDX.Viewport.Bounds">
+            <summary>
+            Gets the size of this resource.
+            </summary>
+            <value>The bounds.</value>
+        </member>
         <member name="M:SharpDX.Viewport.Equals(SharpDX.Viewport@)">
             <summary>
             Determines whether the specified <see cref="T:SharpDX.Viewport"/> is equal to this instance.
@@ -16142,7 +16148,7 @@
             <summary>
             Retrieves a string representation of this object.
             </summary>
-            <returns>A <see cref="T:System.String"/> that represents this instance.</returns>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
         </member>
         <member name="M:SharpDX.Viewport.Project(SharpDX.Vector3,SharpDX.Matrix,SharpDX.Matrix,SharpDX.Matrix)">
             <summary>
@@ -16180,6 +16186,12 @@
             <param name="matrix">An inverted combined WorldViewProjection matrix.</param>
             <param name="vector">The unprojected vector.</param>
         </member>
+        <member name="P:SharpDX.Viewport.AspectRatio">
+            <summary>
+            Gets the aspect ratio used by the viewport.
+            </summary>
+            <value>The aspect ratio.</value>
+        </member>
         <member name="M:SharpDX.Viewport.op_Implicit(SharpDX.Viewport)~SharpDX.Mathematics.Interop.RawViewport">
             <summary>
             Performs an implicit conversion from <see cref="T:SharpDX.Viewport"/> to <see cref="T:SharpDX.Mathematics.Interop.RawViewport"/>.
@@ -16200,18 +16212,6 @@
             </summary>
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
-        </member>
-        <member name="P:SharpDX.Viewport.Bounds">
-            <summary>
-            Gets the size of this resource.
-            </summary>
-            <value>The bounds.</value>
-        </member>
-        <member name="P:SharpDX.Viewport.AspectRatio">
-            <summary>
-            Gets the aspect ratio used by the viewport.
-            </summary>
-            <value>The aspect ratio.</value>
         </member>
         <member name="T:SharpDX.ViewportF">
             <summary>
@@ -16273,6 +16273,12 @@
             Initializes a new instance of the <see cref="T:SharpDX.ViewportF"/> struct.
             </summary>
             <param name="bounds">A bounding box that defines the location and size of the viewport in a render target.</param>
+        </member>
+        <member name="P:SharpDX.ViewportF.Bounds">
+            <summary>
+            Gets the size of this resource.
+            </summary>
+            <value>The bounds.</value>
         </member>
         <member name="M:SharpDX.ViewportF.Equals(SharpDX.ViewportF@)">
             <summary>
@@ -16358,6 +16364,12 @@
             <param name="matrix">An inverted combined WorldViewProjection matrix.</param>
             <param name="vector">The unprojected vector.</param>
         </member>
+        <member name="P:SharpDX.ViewportF.AspectRatio">
+            <summary>
+            Gets the aspect ratio used by the viewport.
+            </summary>
+            <value>The aspect ratio.</value>
+        </member>
         <member name="M:SharpDX.ViewportF.op_Implicit(SharpDX.Viewport)~SharpDX.ViewportF">
             <summary>
             Performs an explicit conversion from <see cref="T:SharpDX.Viewport"/> to <see cref="T:SharpDX.ViewportF"/>.
@@ -16378,18 +16390,6 @@
             </summary>
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
-        </member>
-        <member name="P:SharpDX.ViewportF.Bounds">
-            <summary>
-            Gets the size of this resource.
-            </summary>
-            <value>The bounds.</value>
-        </member>
-        <member name="P:SharpDX.ViewportF.AspectRatio">
-            <summary>
-            Gets the aspect ratio used by the viewport.
-            </summary>
-            <value>The aspect ratio.</value>
         </member>
     </members>
 </doc>

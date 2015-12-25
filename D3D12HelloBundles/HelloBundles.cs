@@ -162,7 +162,7 @@ namespace D3D12HelloBundles
                     new Vertex() {position=new Vector3(0.25f, -0.25f * aspectRatio, 0.0f),color=new Vector4(0.0f, 1.0f, 0.0f, 1.0f) },
                     new Vertex() {position=new Vector3(-0.25f, -0.25f * aspectRatio, 0.0f),color=new Vector4(0.0f, 0.0f, 1.0f, 1.0f ) },
             };
-            
+
             int vertexBufferSize = Utilities.SizeOf(triangleVertices);
 
             // Note: using upload heaps to transfer static data like vert buffers is not 
@@ -170,7 +170,7 @@ namespace D3D12HelloBundles
             // over. Please read up on Default Heap usage. An upload heap is used here for 
             // code simplicity and because there are very few verts to actually transfer.
             vertexBuffer = device.CreateCommittedResource(new HeapProperties(HeapType.Upload), HeapFlags.None, ResourceDescription.Buffer(vertexBufferSize), ResourceStates.GenericRead);
-            
+
             // Copy the triangle data to the vertex buffer.
             IntPtr pVertexDataBegin = vertexBuffer.Map(0);
             Utilities.Write(pVertexDataBegin, triangleVertices, 0, triangleVertices.Length);
@@ -181,7 +181,7 @@ namespace D3D12HelloBundles
             vertexBufferView.BufferLocation = vertexBuffer.GPUVirtualAddress;
             vertexBufferView.StrideInBytes = Utilities.SizeOf<Vertex>();
             vertexBufferView.SizeInBytes = vertexBufferSize;
-            
+
             // Create and record the bundle.
             bundle = device.CreateCommandList(0, CommandListType.Bundle, bundleAllocator, pipelineState);
             bundle.SetGraphicsRootSignature(rootSignature);
@@ -220,16 +220,16 @@ namespace D3D12HelloBundles
 
             // Indicate that the back buffer will be used as a render target.
             commandList.ResourceBarrierTransition(renderTargets[frameIndex], ResourceStates.Present, ResourceStates.RenderTarget);
-            
+
             CpuDescriptorHandle rtvHandle = renderTargetViewHeap.CPUDescriptorHandleForHeapStart;
             rtvHandle += frameIndex * rtvDescriptorSize;
-            commandList.SetRenderTargets(1, rtvHandle, false, null);
+            commandList.SetRenderTargets(1, rtvHandle, null);
 
             // Record commands.
             commandList.ClearRenderTargetView(rtvHandle, new Color4(0, 0.2F, 0.4f, 1), 0, null);
 
             commandList.ExecuteBundle(bundle);
-            
+
             // Indicate that the back buffer will now be used to present.
             commandList.ResourceBarrierTransition(renderTargets[frameIndex], ResourceStates.RenderTarget, ResourceStates.Present);
 
@@ -341,6 +341,6 @@ namespace D3D12HelloBundles
 
         private Fence fence;
         private int fenceValue;
-        
+
     }
 }

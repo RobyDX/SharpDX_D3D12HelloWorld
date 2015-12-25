@@ -13,6 +13,29 @@
             http://msdn.microsoft.com/en-us/library/vstudio/hh780905.aspx
             </summary>
         </member>
+        <member name="T:SharpDX.Diagnostics.VSGraphicsDebugger.CaptureToken">
+            <summary>
+            Helper structure to ease the begin/end graphics capturing
+            </summary>
+            <example>
+            var debugger = new VSGraphicsDebugger();
+            using(debugger.BeginCapture())
+            {
+                ...
+            }
+            </example>
+        </member>
+        <member name="M:SharpDX.Diagnostics.VSGraphicsDebugger.CaptureToken.#ctor(SharpDX.Diagnostics.VSGraphicsDebugger)">
+            <summary>
+            Creates a new instance of the <see cref="T:SharpDX.Diagnostics.VSGraphicsDebugger.CaptureToken"/> structure.
+            </summary>
+            <param name="debugger">The attanched graphics debugger.</param>
+        </member>
+        <member name="M:SharpDX.Diagnostics.VSGraphicsDebugger.CaptureToken.Dispose">
+            <summary>
+            Ends the capture by calling <see cref="M:SharpDX.Diagnostics.VSGraphicsDebugger.EndCapture"/>.
+            </summary>
+        </member>
         <member name="M:SharpDX.Diagnostics.VSGraphicsDebugger.#ctor(System.String)">
             <summary>
             Creates a new instance of the <see cref="T:SharpDX.Diagnostics.VSGraphicsDebugger"/> class and prepares the in-app component of graphics diagnostics to actively capture and record graphics information..
@@ -57,29 +80,6 @@
             Finalizes the graphics log file, closes it, and frees resources that were used while the app was actively recording graphics information.
             </summary>
             <param name="disposing">Ignored.</param>
-        </member>
-        <member name="T:SharpDX.Diagnostics.VSGraphicsDebugger.CaptureToken">
-            <summary>
-            Helper structure to ease the begin/end graphics capturing
-            </summary>
-            <example>
-            var debugger = new VSGraphicsDebugger();
-            using(debugger.BeginCapture())
-            {
-                ...
-            }
-            </example>
-        </member>
-        <member name="M:SharpDX.Diagnostics.VSGraphicsDebugger.CaptureToken.#ctor(SharpDX.Diagnostics.VSGraphicsDebugger)">
-            <summary>
-            Creates a new instance of the <see cref="T:SharpDX.Diagnostics.VSGraphicsDebugger.CaptureToken"/> structure.
-            </summary>
-            <param name="debugger">The attanched graphics debugger.</param>
-        </member>
-        <member name="M:SharpDX.Diagnostics.VSGraphicsDebugger.CaptureToken.Dispose">
-            <summary>
-            Ends the capture by calling <see cref="M:SharpDX.Diagnostics.VSGraphicsDebugger.EndCapture"/>.
-            </summary>
         </member>
         <member name="T:SharpDX.Direct3D.PixHelper">
             <summary>
@@ -154,7 +154,7 @@
         </member>
         <member name="M:SharpDX.MessageFilterHook.#ctor(System.IntPtr)">
             <summary>
-            Initializes a new instance of the <see cref="!:Win32.MessageFilterHook"/> class.
+            Initializes a new instance of the <see cref="!:Win32.MessageFilterHook" /> class.
             </summary>
             <param name="hwnd">The HWND.</param>
         </member>
@@ -230,6 +230,71 @@
             Initializes a new instance of the <see cref="T:SharpDX.Windows.RenderForm"/> class.
             </summary>
             <param name="text">The text.</param>
+        </member>
+        <member name="E:SharpDX.Windows.RenderForm.AppActivated">
+            <summary>
+            Occurs when [app activated].
+            </summary>
+        </member>
+        <member name="E:SharpDX.Windows.RenderForm.AppDeactivated">
+            <summary>
+            Occurs when [app deactivated].
+            </summary>
+        </member>
+        <member name="E:SharpDX.Windows.RenderForm.MonitorChanged">
+            <summary>
+            Occurs when [monitor changed].
+            </summary>
+        </member>
+        <member name="E:SharpDX.Windows.RenderForm.PauseRendering">
+            <summary>
+            Occurs when [pause rendering].
+            </summary>
+        </member>
+        <member name="E:SharpDX.Windows.RenderForm.ResumeRendering">
+            <summary>
+            Occurs when [resume rendering].
+            </summary>
+        </member>
+        <member name="E:SharpDX.Windows.RenderForm.Screensaver">
+            <summary>
+            Occurs when [screensaver].
+            </summary>
+        </member>
+        <member name="E:SharpDX.Windows.RenderForm.SystemResume">
+            <summary>
+            Occurs when [system resume].
+            </summary>
+        </member>
+        <member name="E:SharpDX.Windows.RenderForm.SystemSuspend">
+            <summary>
+            Occurs when [system suspend].
+            </summary>
+        </member>
+        <member name="E:SharpDX.Windows.RenderForm.UserResized">
+            <summary>
+            Occurs when [user resized].
+            </summary>
+        </member>
+        <member name="P:SharpDX.Windows.RenderForm.AllowUserResizing">
+            <summary>
+            Gets or sets a value indicating whether this form can be resized by the user. See remarks.
+            </summary>
+            <remarks>
+            This property alters <see cref="P:System.Windows.Forms.Form.FormBorderStyle"/>, 
+            for <c>true</c> value it is <see cref="F:System.Windows.Forms.FormBorderStyle.Sizable"/>, 
+            for <c>false</c> - <see cref="F:System.Windows.Forms.FormBorderStyle.FixedSingle"/>.
+            </remarks>
+            <value><c>true</c> if this form can be resized by the user (by default); otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:SharpDX.Windows.RenderForm.IsFullscreen">
+            <summary>
+            Gets or sets a value indicationg whether the current render form is in fullscreen mode. See remarks.
+            </summary>
+            <remarks>
+            If Toolkit is used, this property is set automatically,
+            otherwise user should maintain it himself as it affects the behavior of <see cref="P:SharpDX.Windows.RenderForm.AllowUserResizing"/> property.
+            </remarks>
         </member>
         <member name="M:SharpDX.Windows.RenderForm.OnResizeBegin(System.EventArgs)">
             <summary>
@@ -309,71 +374,6 @@
             </summary>
             <param name="m">The Windows <see cref="T:System.Windows.Forms.Message"/> to process.</param>
         </member>
-        <member name="E:SharpDX.Windows.RenderForm.AppActivated">
-            <summary>
-            Occurs when [app activated].
-            </summary>
-        </member>
-        <member name="E:SharpDX.Windows.RenderForm.AppDeactivated">
-            <summary>
-            Occurs when [app deactivated].
-            </summary>
-        </member>
-        <member name="E:SharpDX.Windows.RenderForm.MonitorChanged">
-            <summary>
-            Occurs when [monitor changed].
-            </summary>
-        </member>
-        <member name="E:SharpDX.Windows.RenderForm.PauseRendering">
-            <summary>
-            Occurs when [pause rendering].
-            </summary>
-        </member>
-        <member name="E:SharpDX.Windows.RenderForm.ResumeRendering">
-            <summary>
-            Occurs when [resume rendering].
-            </summary>
-        </member>
-        <member name="E:SharpDX.Windows.RenderForm.Screensaver">
-            <summary>
-            Occurs when [screensaver].
-            </summary>
-        </member>
-        <member name="E:SharpDX.Windows.RenderForm.SystemResume">
-            <summary>
-            Occurs when [system resume].
-            </summary>
-        </member>
-        <member name="E:SharpDX.Windows.RenderForm.SystemSuspend">
-            <summary>
-            Occurs when [system suspend].
-            </summary>
-        </member>
-        <member name="E:SharpDX.Windows.RenderForm.UserResized">
-            <summary>
-            Occurs when [user resized].
-            </summary>
-        </member>
-        <member name="P:SharpDX.Windows.RenderForm.AllowUserResizing">
-            <summary>
-            Gets or sets a value indicating whether this form can be resized by the user. See remarks.
-            </summary>
-            <remarks>
-            This property alters <see cref="P:System.Windows.Forms.Form.FormBorderStyle"/>, 
-            for <c>true</c> value it is <see cref="F:System.Windows.Forms.FormBorderStyle.Sizable"/>, 
-            for <c>false</c> - <see cref="F:System.Windows.Forms.FormBorderStyle.FixedSingle"/>.
-            </remarks>
-            <value><c>true</c> if this form can be resized by the user (by default); otherwise, <c>false</c>.</value>
-        </member>
-        <member name="P:SharpDX.Windows.RenderForm.IsFullscreen">
-            <summary>
-            Gets or sets a value indicationg whether the current render form is in fullscreen mode. See remarks.
-            </summary>
-            <remarks>
-            If Toolkit is used, this property is set automatically,
-            otherwise user should maintain it himself as it affects the behavior of <see cref="P:SharpDX.Windows.RenderForm.AllowUserResizing"/> property.
-            </remarks>
-        </member>
         <member name="T:SharpDX.Windows.RenderLoop">
             <summary>
             RenderLoop provides a rendering loop infrastructure. See remarks for usage. 
@@ -404,6 +404,21 @@
             Initializes a new instance of the <see cref="T:SharpDX.Windows.RenderLoop"/> class.
             </summary>
         </member>
+        <member name="P:SharpDX.Windows.RenderLoop.Control">
+            <summary>
+            Gets or sets the control to associate with the current render loop.
+            </summary>
+            <value>The control.</value>
+            <exception cref="T:System.InvalidOperationException">Control is already disposed</exception>
+        </member>
+        <member name="P:SharpDX.Windows.RenderLoop.UseApplicationDoEvents">
+            <summary>
+            Gets or sets a value indicating whether the render loop should use the default <see cref="M:System.Windows.Forms.Application.DoEvents"/> instead of a custom window message loop lightweight for GC. Default is false.
+            </summary>
+            <value><c>true</c> if the render loop should use the default <see cref="M:System.Windows.Forms.Application.DoEvents"/> instead of a custom window message loop (default false); otherwise, <c>false</c>.</value>
+            <remarks>By default, RenderLoop is using a custom window message loop that is more lightweight than <see cref="M:System.Windows.Forms.Application.DoEvents" /> to process windows event message. 
+            Set this parameter to true to use the default <see cref="M:System.Windows.Forms.Application.DoEvents"/>.</remarks>
+        </member>
         <member name="M:SharpDX.Windows.RenderLoop.NextFrame">
             <summary>
             Calls this method on each frame.
@@ -414,6 +429,11 @@
         <member name="M:SharpDX.Windows.RenderLoop.Dispose">
             <summary>
             Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:SharpDX.Windows.RenderLoop.RenderCallback">
+            <summary>
+            Delegate for the rendering loop.
             </summary>
         </member>
         <member name="M:SharpDX.Windows.RenderLoop.Run(System.Windows.Forms.ApplicationContext,SharpDX.Windows.RenderLoop.RenderCallback)">
@@ -432,21 +452,6 @@
             or
             renderCallback</exception>
         </member>
-        <member name="P:SharpDX.Windows.RenderLoop.Control">
-            <summary>
-            Gets or sets the control to associate with the current render loop.
-            </summary>
-            <value>The control.</value>
-            <exception cref="T:System.InvalidOperationException">Control is already disposed</exception>
-        </member>
-        <member name="P:SharpDX.Windows.RenderLoop.UseApplicationDoEvents">
-            <summary>
-            Gets or sets a value indicating whether the render loop should use the default <see cref="M:System.Windows.Forms.Application.DoEvents"/> instead of a custom window message loop lightweight for GC. Default is false.
-            </summary>
-            <value><c>true</c> if the render loop should use the default <see cref="M:System.Windows.Forms.Application.DoEvents"/> instead of a custom window message loop (default false); otherwise, <c>false</c>.</value>
-            <remarks>By default, RenderLoop is using a custom window message loop that is more lightweight than <see cref="M:System.Windows.Forms.Application.DoEvents"/> to process windows event message. 
-            Set this parameter to true to use the default <see cref="M:System.Windows.Forms.Application.DoEvents"/>.</remarks>
-        </member>
         <member name="P:SharpDX.Windows.RenderLoop.IsIdle">
             <summary>
             Gets a value indicating whether this instance is application idle.
@@ -454,11 +459,6 @@
             <value>
             	<c>true</c> if this instance is application idle; otherwise, <c>false</c>.
             </value>
-        </member>
-        <member name="T:SharpDX.Windows.RenderLoop.RenderCallback">
-            <summary>
-            Delegate for the rendering loop.
-            </summary>
         </member>
         <member name="T:SharpDX.Win32Native">
             <summary>

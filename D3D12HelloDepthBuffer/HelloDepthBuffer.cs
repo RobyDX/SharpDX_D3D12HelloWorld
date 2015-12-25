@@ -368,7 +368,7 @@ namespace D3D12HelloDepthBuffer
             CpuDescriptorHandle dsvHandle = depthStencilViewHeap.CPUDescriptorHandleForHeapStart;
 
             //set render target and depth stencil
-            commandList.SetRenderTargets(1, rtvHandle, false, dsvHandle);
+            commandList.SetRenderTargets(1, rtvHandle, dsvHandle);
 
             // Record commands.
             commandList.ClearRenderTargetView(rtvHandle, new Color4(0, 0.2F, 0.4f, 1), 0, null);
