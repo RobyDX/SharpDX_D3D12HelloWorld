@@ -287,7 +287,7 @@ namespace D3D12HelloMesh
             var heapPosition = heapStart;
 
             // Load model from obj.
-            var importer = new Assimp.AssimpImporter();
+            var importer = new Assimp.AssimpContext();
             var scene = importer.ImportFile(@"../../../Models/lara/lara.obj", PostProcessSteps.GenerateSmoothNormals | PostProcessSteps.FlipUVs | PostProcessSteps.PreTransformVertices);
 
 
@@ -301,7 +301,7 @@ namespace D3D12HelloMesh
             {
                 var positions = mesh.Vertices;
                 var normals = mesh.Normals;
-                var texs = mesh.GetTextureCoords(0);
+                var texs = mesh.TextureCoordinateChannels[0];
                 for (int i = 0; i < mesh.VertexCount; i++)
                 {
                     vertices[vertexOffSet + i] = new Vertex()
@@ -324,7 +324,7 @@ namespace D3D12HelloMesh
                 vertexOffSet += mesh.VertexCount;
                 indexOffSet += mesh.FaceCount * 3;
 
-                string textureName = System.IO.Path.GetFileName(scene.Materials[mesh.MaterialIndex].GetTexture(TextureType.Diffuse, 0).FilePath);
+                string textureName = System.IO.Path.GetFileName(scene.Materials[mesh.MaterialIndex].TextureDiffuse.FilePath);
                 var texResource = TextureUtilities.CreateTextureFromDDS(device, @"../../../Models/lara/" + textureName);
                 textures.Add(texResource);
 

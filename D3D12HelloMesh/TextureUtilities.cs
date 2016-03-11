@@ -696,7 +696,7 @@ namespace D3D12HelloMesh
                     resDim = ResourceDimension.Texture2D;
                 }
             }
-            var resource = d3dDevice.CreateCommittedResource(new HeapProperties(HeapType.Upload), HeapFlags.None,
+            var resource = d3dDevice.CreateCommittedResource(new HeapProperties(CpuPageProperty.WriteBack, MemoryPool.L0), HeapFlags.None,
                         new ResourceDescription()
                         {
                             //Alignment = -1,
