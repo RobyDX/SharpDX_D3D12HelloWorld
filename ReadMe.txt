@@ -1,6 +1,6 @@
 //==============================================================
 //Tutorial Created By Roberto Nacchia (robydx@gmail.com)
-//www.notjustcode.net 2015
+//www.notjustcode.it 2016
 
 //Based on SharpDX Library (http://sharpdx.org/)
 //web site: http://www.notjustcode.it
@@ -17,6 +17,7 @@ Tutorial05: HelloBundles
 Tutorial06: HelloDepthBuffer
 Tutorial07: HelloMesh
 Tutorial08: HelloRenderTarget
+Tutorial09: HelloFont
  
 
 -- Compile and run, required .Net Framework 4.5, Windows 7 or above, DirectX11 Compatible VideoCard
